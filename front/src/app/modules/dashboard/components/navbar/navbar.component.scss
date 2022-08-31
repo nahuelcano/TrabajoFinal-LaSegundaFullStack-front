@@ -1,0 +1,9 @@
+@use 'styles' as styles;
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.primary {
+  background-color: styles.colors(warnDark);
+}
