@@ -27,6 +27,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/carta/carta.module').then((m) => m.CartaModule),
   }, 
+  //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
+  // {
+  //   path: 'edit',
+  //   canLoad: [AuthGuard],
+  //   loadChildren: () =>
+  //     import('./modules/')
+  // },
   //aca seria la parte de la caja/carrito
   // {
   //   path: 'carrito',
@@ -34,6 +41,13 @@ const routes: Routes = [
   //   loadChildren: () =>
   //     import('./modules/')
   // }, 
+  //aca seria la parte de la contacto
+  // {
+  //   path: 'contacto',
+  //   canLoad: [AuthGuard],
+  //   loadChildren: () =>
+  //     import('./modules/')
+  // },
   {
     path: '**',
     component: NotfoundComponent,
