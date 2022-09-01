@@ -35,23 +35,24 @@ const routes: Routes = [
   //     import('./modules/')
   // },
   //aca seria la parte de la caja/carrito
-  // {
-  //   path: 'carrito',
-  //   canLoad: [AuthGuard],
-  //   loadChildren: () =>
-  //     import('./modules/')
-  // }, 
-  //aca seria la parte de la contacto
-  // {
-  //   path: 'contacto',
-  //   canLoad: [AuthGuard],
-  //   loadChildren: () =>
-  //     import('./modules/')
-  // },
   {
-    path: '**',
-    component: NotfoundComponent,
+    path: 'carrito',
+    canLoad: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/carrito/carrito.module').then((m) => m.CarritoModule),
+  }, 
+  // aca seria la parte de la contacto
+  {
+    path: 'contacto',
+    canLoad: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/contacto/contacto.module').then((m) => m.ContactoModule),
   },
+  // {
+  //   path: '**',
+  //   component: NotfoundComponent,
+  //   // redirectTo:
+  // },
 ];
 
 @NgModule({

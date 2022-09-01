@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import {MatFormFieldModule} from '@angular/material/form-field';
+// import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'gdp-login',
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       console.log(this.form.value);
       localStorage.setItem('isLogged', 'true');
-      this._router.navigate(['dashboard']);
+      this._router.navigate(['/dashboard']);
     } else {
       this.form.markAllAsTouched();
     }
