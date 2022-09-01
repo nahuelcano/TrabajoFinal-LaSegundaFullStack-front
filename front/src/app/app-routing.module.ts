@@ -7,6 +7,7 @@ import { AuthGuard } from '@gdp/shared/guards';
 
 const routes: Routes = [
   {
+    //hola, hacer una pagina de inicio bonita del bar Luna
     path: '',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
@@ -19,6 +20,20 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  // aca seria la carta del resto
+  {
+    path: 'carta',
+    canLoad: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/carta/carta.module').then((m) => m.CartaModule),
+  }, 
+  //aca seria la parte de la caja/carrito
+  // {
+  //   path: 'carrito',
+  //   canLoad: [AuthGuard],
+  //   loadChildren: () =>
+  //     import('./modules/')
+  // }, 
   {
     path: '**',
     component: NotfoundComponent,
