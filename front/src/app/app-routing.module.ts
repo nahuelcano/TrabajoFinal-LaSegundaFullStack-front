@@ -13,7 +13,7 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'dashboard',
+    path: 'inicio',
     canLoad: [AuthGuard],
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module').then(
@@ -48,11 +48,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/contacto/contacto.module').then((m) => m.ContactoModule),
   },
-  // {
-  //   path: '**',
-  //   component: NotfoundComponent,
-  //   // redirectTo:
-  // },
+  {
+    path: '**',
+    component: NotfoundComponent,
+    loadChildren: () =>
+      import('./shared/modules/components/components.module').then((m) => m.ComponentsModule),
+    // redirectTo:
+  },
 ];
 
 @NgModule({

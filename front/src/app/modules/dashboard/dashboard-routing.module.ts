@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
 import { AuthGuard } from '@gdp/shared/guards';
-
+//este seria el inicio bonito
 const routes: Routes = [
   {
     path: '',
