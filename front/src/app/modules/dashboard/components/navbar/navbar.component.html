@@ -1,21 +1,31 @@
 <mat-toolbar class="bgcolor">
-  <a  [routerLink]="['/inicio']">
-    <button mat-icon-button class="example-icon" aria-label="menu icon">
-        <span class="material-icons">nights_stay</span> 
-        
-      </button>
-    </a>
-    <span>Bar Luna</span>
-    <span class="spacer"></span>
-    <button mat-icon class="user-icon" aria-label="Icon-button with user icon">
-      <span class="material-icons">
-        person
-      </span>
+  <a [routerLink]="['/inicio']">
+    <button mat-icon-button class="luna-icon" aria-label="luna icon">
+      <span class="material-icons">nights_stay</span>
+
     </button>
-    <button mat-icon-button class="contact-icon" aria-label="Icon-button with heart icon">
-      <span class="material-icons">info</span>
+  </a>
+  <span>Bar Luna</span>
+  <span class="spacer"></span>
+
+  <button mat-icon class="user-icon" aria-label="Icon-button with user icon">
+    <span class="material-icons">
+      person
+    </span>
+  </button>
+
+  <a [routerLink]="['/carrito']">
+    <button mat-icon-button class="carrito-icon" aria-label="carrito icon">
+      <span class="material-icons">shopping_cart</span>
+
     </button>
-    <button mat-icon-button class="logout-icon" aria-label="Icon-button with LogOut icon">
-      <span class="material-icons">logout</span>
-    </button>
-  </mat-toolbar>
+  </a>
+  <a [routerLink]="['/contacto']">
+  <button mat-icon-button class="contact-icon" aria-label="Icon-button with heart icon">
+    <span class="material-icons">info</span>
+  </button>
+  </a>
+  <button mat-icon-button class="logout-icon" aria-label="Icon-button with LogOut icon">
+    <span class="material-icons">logout</span>
+  </button>
+</mat-toolbar>
