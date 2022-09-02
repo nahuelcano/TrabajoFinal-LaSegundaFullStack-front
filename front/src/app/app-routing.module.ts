@@ -4,6 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './shared/components/notfound/notfound.component';
 
 import { AuthGuard } from '@gdp/shared/guards';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
+import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
+import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
+// import { CartaComponent } from './modules/dashboard/components/carta/components/carta/carta.component';
+// import { CarritoComponent } from './modules/dashboard/components/carrito/components/carrito/carrito.component';
+// import { ContactoComponent } from './modules/dashboard/components/contacto/components/contacto/contacto.component';
+
 
 const routes: Routes = [
   {
@@ -12,41 +20,36 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
+  //ver
   {
     path: 'inicio',
     canLoad: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      ),
+    component:DashboardComponent,
   },
   // aca seria la carta del resto
   {
     path: 'carta',
     canLoad: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/carta/carta.module').then((m) => m.CartaModule),
+    component:CartaComponent,
   }, 
-  //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
-  // {
-  //   path: 'edit',
-  //   canLoad: [AuthGuard],
-  //   loadChildren: () =>
-  //     import('./modules/')
-  // },
-  //aca seria la parte de la caja/carrito
+  // //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
+  // // {
+  // //   path: 'edit',
+  // //   canLoad: [AuthGuard],
+  // //   loadChildren: () =>
+  // //     import('./modules/')
+  // // },
+  // //aca seria la parte de la caja/carrito
   {
     path: 'carrito',
     canLoad: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/carrito/carrito.module').then((m) => m.CarritoModule),
+    component:CarritoComponent,
   }, 
-  // aca seria la parte de la contacto
+  // // aca seria la parte de la contacto
   {
     path: 'contacto',
     canLoad: [AuthGuard],
-    loadChildren: () =>
-      import('./modules/contacto/contacto.module').then((m) => m.ContactoModule),
+    component:ContactoComponent
   },
   {
     path: '**',

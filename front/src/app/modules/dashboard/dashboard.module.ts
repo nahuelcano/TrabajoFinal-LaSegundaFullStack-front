@@ -6,9 +6,11 @@ import { DashboardComponent } from './dashboard.component';
 
 import { ComponentsModule, MaterialModule } from '@gdp/shared/modules';
 
-import { NavbarComponent, CardComponent } from '@gdp/dashboard/components';
+import { CarritoComponent,CartaComponent,ContactoComponent } from '@gdp/dashboard/components';
+// import { CarritoComponent } from '@gdp/dashboard/components/carrito/';
+//
 
-const components = [NavbarComponent, CardComponent];
+const components = [  CarritoComponent,CartaComponent,ContactoComponent];
 
 @NgModule({
   declarations: [DashboardComponent, ...components],
@@ -16,7 +18,7 @@ const components = [NavbarComponent, CardComponent];
     CommonModule,
     DashboardRoutingModule,
     ComponentsModule,
-    MaterialModule,
+    MaterialModule
   ],
 })
 export class DashboardModule {}

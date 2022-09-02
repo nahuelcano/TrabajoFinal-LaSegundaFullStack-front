@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'gdp-register',
   templateUrl: './register.component.html',
@@ -13,13 +13,14 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
+      this._router.navigate(['/login']);
     } else {
     }
   }
