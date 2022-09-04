@@ -1,0 +1,74 @@
+@use 'styles' as styles;
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.bg-color {
+    background-color: styles.colors(warnDark);
+
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
+    color: white !important;
+}
+.bg-black {
+    background-color: #000 !important;
+}
+
+.py-7 {
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}
+p {
+    color: white !important;
+}
+.tab {
+    padding-left: 3em;
+}
+
+.text-xs {
+    font-family: Lato, sans-serif;
+    font-size: .90rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+
+}
+
+.text-xss {
+    font-family: Lato, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-style: italic;
+
+}
+
+.text-primary,
+a {
+    color: #d63384 !important;
+}
+.container px-4 {
+    background-color: #000 !important;
+}
+.list-inline,
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-center {
+    text-align: center !important;
+}

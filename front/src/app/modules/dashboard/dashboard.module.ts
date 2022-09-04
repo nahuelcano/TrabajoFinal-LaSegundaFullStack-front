@@ -5,8 +5,9 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
 import { ComponentsModule, MaterialModule } from '@gdp/shared/modules';
-
+import { MatTabsModule } from '@angular/material/tabs';
 import {   CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent } from '@gdp/dashboard/components';
+
 
 
 const components = [  CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent];
@@ -17,7 +18,8 @@ const components = [  CarritoComponent,CartaComponent,ContactoComponent,EdicionC
     CommonModule,
     DashboardRoutingModule,
     ComponentsModule,
-    MaterialModule
+    MaterialModule,
+    
   ],
 })
 export class DashboardModule {}

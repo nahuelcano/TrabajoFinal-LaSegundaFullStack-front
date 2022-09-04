@@ -8,12 +8,12 @@ import { ComponentsModule } from './shared/modules/components/components.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './modules/auth/auth.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { NavbarComponent } from './modules/dashboard/components';
+// Componentes de la pagina
+import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,FooterComponent } from './modules/dashboard/components';
 import { MaterialModule } from './shared/modules';
-import { EdicionComponent } from './modules/dashboard/components';
 
 @NgModule({
-  declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent
+  declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, FooterComponent
   ],
   imports: [BrowserModule,
     AuthModule,

@@ -1,0 +1,22 @@
+@use 'styles' as styles;
+::ng-deep .mat-tab-label-active {
+    color: #be2b74 !important;
+}
+
+.text-primary {
+    color: #d63384 !important;
+}
+a:-webkit-any-link {
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+}
+.spacer {
+    flex: 1 1 auto;
+}
+.hamburguesas,.pizzas,.tapeos{
+    color: black;
+
+}
+.mat-tab-label-active,.mat-tab-label-content{
+    color: #d63384 !important;
+}

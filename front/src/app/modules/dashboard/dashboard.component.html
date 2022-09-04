@@ -1,91 +1,124 @@
+<article class="d-flex justify-content-center">
 
-<article class="grid">
-
-  <h1>Bar Luna</h1>
+  <!-- <h1>Bar Luna</h1> -->
   <!-- </section> -->
-<header data-jarallax data-speed=".8">
-  <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0">
-    <div class="container  my-auto">
-      <div class="row jsutify-content-center">
-        <div class="col-12 col-md-8 col-lg-6 text-center">
-          <h6 class="text-xs text-white-75">
-            <span class="text-primary">Bar</span>
-          </h6>
-          <h1 class="display-1 text-white mb-4">Luna</h1>
-          <p class="text-center text-white-75 mb-7"> Una nueva experiencia en el centro de la ciudad.</p>
-          <a class="btn btn-outline-primary text-white text-primary-hover mb-7 mb-md-0" href="#carta">Mira nuestro menu</a>
+
+  <!-- <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0">
+      <div class="main-container  my-auto">
+        <div class="row jsutify-content-center">
+          <div class="col-12 col-md-8 col-lg-6 text-center">
+            <h6 class="text-xs text-white-75">
+              <span class="text-primary text-center">Bar</span>
+            </h6>
+            <h1 class="display-1 text-white mb-4 text-center">Luna</h1>
+            <p class="text-center text-white-75 mb-7"> Una nueva experiencia en el centro de la ciudad.</p>
+            <a class="btn btn-outline-primary text-white text-primary-hover mb-7 mb-md-0" [routerLink]="['/carta']">
+              Mira nuestro menu
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+
+
+
+
+  
+
+
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="container">
+        <div class="content-center brand text-center">
+          <h1 class="h1-seo text-center">•Bar Luna•</h1>
+          <h3 class="text-center">
+            Una nueva experiencia en el centro de la ciudad.
+          </h3>
+          <button mat-raised-button color="primary" [routerLink]="['/carta']">Mira nuestro menu </button>
         </div>
       </div>
     </div>
 
   </div>
 
-</header>
-  <body>
-    
 
 
 
 
 
-  </body>
-  <!-- arreglar el footer para que se vea realmente abajo siempre o solo en el inicio -->
-  <!-- <footer class="py-7 py-md-9 bg-black">
-    <div class="cointeiner px-4">
-      <div class="col-sm-4">
-        <h5 class="text-xs text-primary">Acerca de nosotros</h5>
-        <p class="desc">
-          <span class="tab"></span> Somos un pequeño bar en el centro de la ciudad de Bahia Blanca, que nos
-          especializamos en nuestras pizzas a las brazas.
-        </p>
-      </div>
-      <div class="col-sm-4">
-        <h5 class="text-xs text-primary">Contacto</h5>
-        <ul class="list-unstyled mb-6">
-          <li class="d-flex mb-2">
-            <p class="desc">
-              <span class="tab"></span> Zelarrayán 43, Bahia Blanca, Provincia de Buenos Aires, Argentina.
-            </p>
-          </li>
-          <li class="d-flex mb-2">
-            <p class="desc">
-              <span class="tab"></span> +54 291 622 9281
-            </p>
-          </li>
-          <li class="d-flex">
-            <span class="tab"></span><a href="mailto:admin@barluna.com"> admin@barluna.com </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <h5 class="text-xs text-primary">Horarios</h5>
-        <div class="mb-3">
-          <div class="text-xss">
-            <p class="descTit">Domingo - Miercoles</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- arreglar el footer para que se vea realmente abajo siempre o solo en el inicio -->
+    <!-- <footer class="py-7 py-md-9 bg-black fixed-bottom">
+      <div class="cointeiner px-4">
+        <div class="col-sm-4">
+          <h5 class="text-xs text-primary">Acerca de nosotros</h5>
+          <p class="desc">
+            <span class="tab"></span> Somos un pequeño bar en el centro de la ciudad de Bahia Blanca, que nos
+            especializamos en nuestras pizzas a las brazas.
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h5 class="text-xs text-primary">Contacto</h5>
+          <ul class="list-unstyled mb-6">
+            <li class="d-flex mb-2">
+              <p class="desc">
+                <span class="tab"></span> Zelarrayán 43, Bahia Blanca, Provincia de Buenos Aires, Argentina.
+              </p>
+            </li>
+            <li class="d-flex mb-2">
+              <p class="desc">
+                <span class="tab"></span> +54 291 622 9281
+              </p>
+            </li>
+            <li class="d-flex">
+              <span class="tab"></span><a href="mailto:admin@barluna.com"> admin@barluna.com </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <h5 class="text-xs text-primary">Horarios</h5>
+          <div class="mb-3">
+            <div class="text-xss">
+              <p class="descTit">Domingo - Miercoles</p>
+            </div>
+            <div class="font-serif">
+              <p class="desc">10:00 AM - 23:30 PM</p>
+            </div>
           </div>
-          <div class="font-serif">
-            <p class="desc">10:00 AM - 23:30 PM</p>
+          <div class="mb-6">
+            <div class="text-xss">
+              <p class="descTit">Jueves - Sabados</p>
+            </div>
+            <div class="font-serif">
+              <p class="desc">
+                10:00 AM - 04:00 AM
+              </p>
+            </div>
           </div>
         </div>
-        <div class="mb-6">
-          <div class="text-xss">
-            <p class="descTit">Jueves - Sabados</p>
-          </div>
-          <div class="font-serif">
-            <p class="desc">
-              10:00 AM - 04:00 AM
-            </p>
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <hr class="hr-sm me-3" style="height: 1px;">
+              <p class="desc"> © 2021 Bar Luna. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex align-items-center">
-            <hr class="hr-sm me-3" style="height: 1px;">
-            <p class="desc"> © 2021 Bar Luna. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer> -->
+    </footer> -->
 </article>

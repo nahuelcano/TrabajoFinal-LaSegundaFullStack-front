@@ -21,6 +21,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const modules = [
 	MatToolbarModule,
+	MatTabsModule,
 	MatButtonModule,
 	MatSlideToggleModule,
 	MatIconModule,
@@ -28,7 +29,6 @@ const modules = [
 	MatSidenavModule,
 	MatListModule,
 	MatDividerModule,
-	MatTabsModule,
 	MatCardModule,
 	MatChipsModule,
 	MatFormFieldModule,

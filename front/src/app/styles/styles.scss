@@ -1,4 +1,6 @@
-
+.mat-tab-label {
+  color: #0a1015;
+}
 $colors: (
   primary: #202e3a,
   primaryLight: #253341,
@@ -44,6 +46,4 @@ $spacing: (
   @return map-get($colors, $color);
 }
 
-.clase {
-  background-color: colors(orange);
-}
+
