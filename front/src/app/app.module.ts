@@ -10,9 +10,10 @@ import { AuthModule } from './modules/auth/auth.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { NavbarComponent } from './modules/dashboard/components';
 import { MaterialModule } from './shared/modules';
+import { EdicionComponent } from './modules/dashboard/components';
 
 @NgModule({
-  declarations: [AppComponent,DashboardComponent, NavbarComponent
+  declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent
   ],
   imports: [BrowserModule,
     AuthModule,

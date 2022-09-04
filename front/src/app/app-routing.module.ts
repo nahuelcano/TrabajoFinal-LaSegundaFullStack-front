@@ -8,14 +8,12 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
-// import { CartaComponent } from './modules/dashboard/components/carta/components/carta/carta.component';
-// import { CarritoComponent } from './modules/dashboard/components/carrito/components/carrito/carrito.component';
-// import { ContactoComponent } from './modules/dashboard/components/contacto/components/contacto/contacto.component';
+import { EdicionComponent } from './modules/dashboard/components';
+
 
 
 const routes: Routes = [
   {
-    //hola, hacer una pagina de inicio bonita del bar Luna
     path: '',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
@@ -23,7 +21,6 @@ const routes: Routes = [
   //ver
   {
     path: 'inicio',
-    canLoad: [AuthGuard],
     component:DashboardComponent,
   },
   // aca seria la carta del resto
@@ -33,12 +30,11 @@ const routes: Routes = [
     component:CartaComponent,
   }, 
   // //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
-  // // {
-  // //   path: 'edit',
-  // //   canLoad: [AuthGuard],
-  // //   loadChildren: () =>
-  // //     import('./modules/')
-  // // },
+  {
+    path: 'edicion',
+    canLoad: [AuthGuard],
+    component: EdicionComponent,
+  },
   // //aca seria la parte de la caja/carrito
   {
     path: 'carrito',
@@ -51,6 +47,7 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     component:ContactoComponent
   },
+ 
   {
     path: '**',
     component: NotfoundComponent,
