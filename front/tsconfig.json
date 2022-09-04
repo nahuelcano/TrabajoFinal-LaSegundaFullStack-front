@@ -25,42 +25,42 @@
     "paths": {
       // Shared
       "@gdp/shared/modules": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/shared/modules/index.ts"
+        "src/app/shared/modules/index.ts"
       ],
       "@gdp/shared/guards": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/shared/guards/index.ts"
+        "src/app/shared/guards/index.ts"
       ],
       // Auth
       "@gdp/auth/views": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/auth/views/index.ts"
+        "src/app/modules/auth/views/index.ts"
       ],
       "@gdp/auth/modules": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/auth/modules/index.ts"
+        "src/app/modules/auth/modules/index.ts"
       ],
       "@gdp/auth/models": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/auth/models/index.ts"
+        "src/app/modules/auth/models/index.ts"
       ],
       "@gdp/auth/services": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/auth/services/index.ts"
+        "src/app/modules/auth/services/index.ts"
       ],
       "@gdp/auth/components": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/auth/components/index.ts"
+        "src/app/modules/auth/components/index.ts"
       ],
       // Dashboard
       "@gdp/dashboard/views": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/dashboard/views/index.ts"
+        "src/app/modules/dashboard/views/index.ts"
       ],
       "@gdp/dashboard/modules": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/dashboard/modules/index.ts"
+        "src/app/modules/dashboard/modules/index.ts"
       ],
       "@gdp/dashboard/models": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/dashboard/models/index.ts"
+        "src/app/modules/dashboard/models/index.ts"
       ],
       "@gdp/dashboard/services": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/dashboard/services/index.ts"
+        "src/app/modules/dashboard/services/index.ts"
       ],
       "@gdp/dashboard/components": [
-        "D:/Usuarios/Luciana/Documents/GitHub/Trabajo Final LasegundaFullStack/TrabajoFinal-LaSegundaFullStack-front/front/src/app/modules/dashboard/components/index.ts"
+        "src/app/modules/dashboard/components/index.ts"
       ]
     }
   },
