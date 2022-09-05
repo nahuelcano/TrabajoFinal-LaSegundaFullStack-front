@@ -1,13 +1,17 @@
 <div>
     <!-- barra -->
-<gdp-navbar></gdp-navbar>
-<!-- aplicacion -->
-<router-outlet> 
-</router-outlet> 
-<!-- aca footer -->
-<footer>
-    <gdp-footer></gdp-footer>
-</footer>
+    <gdp-navbar></gdp-navbar>
+    <!-- aplicacion -->
+    <div class="wrapper" fxLayout="row" layout-align="center start">
+        <div style="max-width: 2600px;" flex layout="column" layout-fill>
+            <router-outlet>
+            </router-outlet>
+            <!-- aca footer -->
+            <footer>
+                <gdp-footer></gdp-footer>
+            </footer>
+        </div>
+        </div>
 
-</div>
 
+    </div>
