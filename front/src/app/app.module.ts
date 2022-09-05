@@ -8,6 +8,7 @@ import { ComponentsModule } from './shared/modules/components/components.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './modules/auth/auth.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 // Componentes de la pagina
 import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,FooterComponent,ProductosListBoxComponent,ProductDetailsComponent } from './modules/dashboard/components';
 
@@ -21,6 +22,7 @@ import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,Cont
     BrowserAnimationsModule,
     ComponentsModule,
     AppRoutingModule,
+    ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent],

@@ -10,7 +10,7 @@ import {   CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components = [  CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent];
 

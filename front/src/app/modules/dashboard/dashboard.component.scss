@@ -1,15 +1,4 @@
 
-
-// footer{
-//   display: block;
-//   position: absolute;
-//   left: 0px;
-//   bottom: 0px;
-//   height: 10px;
-//   width: 100%;
-//   // background-color:#000 !important;
-// }
-
 :root{
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -78,8 +67,8 @@ p{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  // height: 60vh;
+  // height: 100vh;
+  height: 60vh;
   background-attachment: fixed;
 }
 
