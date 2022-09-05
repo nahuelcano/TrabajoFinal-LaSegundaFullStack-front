@@ -67,12 +67,21 @@ p{
 }
 .text-center{
   text-align: center !important;
-  // // position: absolute;
-  // position:absolute;
-  // left: 50%;
-  // top: 50%;
-  // transform: translateX(50%) translateY(20%) ;
+
+  
 }
+.wrapper{
+  padding-top: 100px;
+  color: #d63384;
+  background-image: url(../../../assets/fondoBar.jpg);
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 60vh;
+  background-attachment: fixed;
+}
+
 
 
 

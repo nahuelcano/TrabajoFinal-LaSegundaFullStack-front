@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
+      // tengo el form pero deberia de guardarlo en algun lugar
       localStorage.setItem('isLogged', 'true');
       this._router.navigate(['/inicio']);
     } else {
+      alert('El email o la contraseña son incorrectos.');
       this.form.markAllAsTouched();
     }
   }

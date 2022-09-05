@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { producto } from 'src/app/modules/modelos/productos.model';
 @Component({
   selector: 'gdp-components',
   template: ``,
@@ -9,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // productosList: producto[] = [
+    //   new producto('ver como conseguir los datos de la bd')
+    // ]
+  }
 
   ngOnInit(): void {
   }

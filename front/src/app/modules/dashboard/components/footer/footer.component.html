@@ -1,5 +1,5 @@
 <!-- <footer class="py-7 py-md-9 bg-color fixed-bottom">
-    <div class="cointainer px-4">
+  <div class="cointainer px-4">
         <div class="col-sm-4">
             <h5 class="text-xs text-primary">Acerca de nosotros</h5>
             <p class="desc">
@@ -55,11 +55,11 @@
         </div>
     </div>
 </footer> -->
-
+<footer>
     <div class="footer" #footer>
-        <!-- <div class="container px-4"> -->
-            <div layout="row">
-                <div flex>
+        <div class="container px-4">
+            <div fxLayout="row" >
+                <div fxFlex="30">
                     <h5 class="text-xs text-primary">Acerca de nosotros</h5>
                     <p class="desc">
                         <span class="tab"></span> Somos un pequeño bar en el centro de la ciudad de Bahia Blanca, que
@@ -67,26 +67,26 @@
                         especializamos en nuestras pizzas a las brazas.
                     </p>
                 </div>
-                <div flex>
+                <div fxFlex="30">
                     <h5 class="text-xs text-primary">Contacto</h5>
-                    <ul class="list-unstyled mb-6">
-                        <li class="d-flex mb-2">
+                    <div class="list-unstyled mb-6">
+                        <div class="d-flex mb-2">
                             <p class="desc">
-                                <span class="tab"></span> Zelarrayán 43, Bahia Blanca, Provincia de Buenos Aires,
+                                 Zelarrayán 43, Bahia Blanca, Provincia de Buenos Aires,
                                 Argentina.
                             </p>
-                        </li>
-                        <li class="d-flex mb-2">
+                        </div>
+                        <div class="d-flex mb-2">
                             <p class="desc">
-                                <span class="tab"></span> +54 291 622 9281
+                                 +54 291 622 9281
                             </p>
-                        </li>
-                        <li class="d-flex">
-                            <span class="tab"></span><a href="mailto:admin@barluna.com"> admin@barluna.com </a>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="d-flex">
+                            <a href="mailto:admin@barluna.com"> admin@barluna.com </a>
+                        </div>
+                    </div>
                 </div>
-                <div flex>
+                <div fxFlex="30">
                     <h5 class="text-xs text-primary">Horarios</h5>
                     <div class="mb-3">
                         <div class="text-xss">
@@ -116,5 +116,14 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
     </div>
+</footer> 
+
+<!-- <footer>
+    <mat-toolbar class="md-hue-2 md-scroll-shrink">
+      <div layout="row" layout-align="center center" flex>
+        Powered by Webocity Technologies
+      </div>
+    </mat-toolbar>
+</footer> -->

@@ -18,7 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+ 
 const modules = [
 	MatToolbarModule,
 	MatTabsModule,
