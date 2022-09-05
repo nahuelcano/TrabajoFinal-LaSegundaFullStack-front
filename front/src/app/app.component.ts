@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { producto } from './modules/modelos/productos.model';
 
 @Component({
   selector: 'gdp-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Luna';
+  
+
+      
+  
 }

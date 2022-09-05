@@ -1,0 +1,18 @@
+<p>product-details works!</p>
+<div class="wrapper">
+    <div class="pull-left">
+    
+        <h4 class="list-group-item-header"> {{prod.nombre}}</h4>
+        <div class="pull right">
+            <img [src]="prod.imagepath" alt="prod.Nombre" style="max-height: 100px">
+    
+        </div>
+        <p class="list-group-item-description">{{prod.ingredientes}}</p>
+        <p class="list-group-item-description">${{prod.precio}}</p>
+    
+    </div>
+    
+    <button mat-button>
+        <p class="comprar">Comprar</p>
+    </button>
+</div>

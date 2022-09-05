@@ -8,13 +8,14 @@ import { ComponentsModule, MaterialModule } from '@gdp/shared/modules';
 import { MatTabsModule } from '@angular/material/tabs';
 import {   CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent,ProductosListBoxComponent } from '@gdp/dashboard/components';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 
 const components = [  CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent];
 
 @NgModule({
-  declarations: [DashboardComponent, ...components ],
+  declarations: [DashboardComponent, ...components, ProductDetailsComponent ],
   imports: [
     CommonModule,
     DashboardRoutingModule,

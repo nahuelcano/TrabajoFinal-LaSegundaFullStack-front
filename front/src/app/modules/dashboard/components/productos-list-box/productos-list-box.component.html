@@ -1,1 +1,23 @@
-<p>productos-list-box works!</p>
+<div class="wrapper">
+    
+<div class="list-group-item clearfix" *ngFor ="let item of productlist">
+    
+    <div class="pull-left">
+        
+        <h4 class="list-group-item-header"> {{item.nombre}}</h4>
+        <div class="pull right">
+            <img [src]="item.imagepath" alt="item.Nombre" style="max-height: 100px">
+        
+        </div>
+        <p class="list-group-item-description">{{item.ingredientes}}</p>
+        <p class="list-group-item-description">${{item.precio}}</p>
+        
+    </div>
+      
+    <button mat-button>Más detalles</button>
+    <button mat-button>
+        <p class="comprar">Comprar</p>
+    </button>
+
+</div>
+</div>
