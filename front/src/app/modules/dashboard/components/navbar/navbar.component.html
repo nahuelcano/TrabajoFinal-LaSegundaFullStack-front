@@ -17,14 +17,22 @@
   <a [routerLink]="['/carrito']">
     <button mat-icon-button class="carrito-icon" aria-label="carrito icon">
       <span class="material-icons">shopping_cart</span>
-
     </button>
   </a>
   <a [routerLink]="['/contacto']">
     <button mat-icon-button class="contact-icon" aria-label="Icon-button with info icon">
+      <span class="material-icons">help</span>
+    </button>
+  </a>
+  <a>
+  <!-- [[routerLink]="['/info']" -->
+  <!-- poner informacion de nosotros tipo quienes somos y eso -->
+    <button mat-icon-button class="contact_support" aria-label="Icon-button with info icon">
       <span class="material-icons">info</span>
     </button>
   </a>
+
+  <!-- agragar un informacion para mostrar lo que aparece en el footer con el api de google maps -->
   <a [routerLink]="['/inicio']">
     <button mat-icon-button class="logout-icon" aria-label="Icon-button with LogOut icon">
       <span class="material-icons">logout</span>
