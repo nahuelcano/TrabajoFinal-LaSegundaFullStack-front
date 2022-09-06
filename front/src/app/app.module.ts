@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,FooterComponent,ProductosListBoxComponent,ProductDetailsComponent } from './modules/dashboard/components';
 import { ProductoService } from './shared/services/productos.service';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, FooterComponent,ProductosListBoxComponent,ProductDetailsComponent
@@ -23,7 +24,8 @@ import { ProductoService } from './shared/services/productos.service';
     BrowserAnimationsModule,
     ComponentsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     ],
   providers: [ProductoService],
   bootstrap: [AppComponent],

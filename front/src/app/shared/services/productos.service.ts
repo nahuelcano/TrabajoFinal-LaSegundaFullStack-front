@@ -19,6 +19,18 @@ export class ProductoService implements OnInit {
       ingredientes: 'Mozzarella',
       precio: 1500,
       imagepath: './assets/pizza.jpg'
+      },
+      {
+        nombre: 'Papas bravas',
+      ingredientes: 'Papas y condimentos',
+      precio: 970.3,
+      imagepath: 'https://mui.kitchen/__export/1623169788508/sites/muikitchen/img/2021/06/08/patatas-bravas-2.jpg_1782192108.jpg'
+      },
+      {
+        nombre: 'Coca Cola',
+        ingredientes: 'Gaseosa',
+        precio: 542.10,
+        imagepath: 'https://journey.coca-cola.com/content/dam/journey/lc/es/private/nuestra-compania/lc-es-CompFeature_Content-Image_Mobile.jpg'
     }
   ];
     return productList;
