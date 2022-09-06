@@ -19,12 +19,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
-  //ver
+  //inicio
   {
     path: 'inicio',
     component:DashboardComponent,
   },
-  // aca seria la carta del resto
+ //carta
   {
     path: 'carta',
     canLoad: [AuthGuard],
@@ -36,28 +36,31 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     component: EdicionComponent,
   },
-  // //aca seria la parte de la caja/carrito
+  // caja/carrito
   {
     path: 'carrito',
     canLoad: [AuthGuard],
     component:CarritoComponent,
   }, 
-  // // aca seria la parte de la contacto
+  //contacto
   {
     path: 'contacto',
     canLoad: [AuthGuard],
     component:ContactoComponent
   },
+
   {
     path: 'productos',
     canLoad: [AuthGuard],
     component:ProductosListBoxComponent
   },
+
   {
     path: 'producto-detalle',
     canLoad: [AuthGuard],
     component:ProductDetailsComponent
   },
+  //usuario
   {
     path: 'usuario',
     canLoad: [AuthGuard],
