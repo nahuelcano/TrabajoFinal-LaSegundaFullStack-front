@@ -11,11 +11,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 const components = [  CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent];
 
 @NgModule({
-  declarations: [DashboardComponent, ...components, ProductDetailsComponent ],
+  declarations: [DashboardComponent, ...components, ProductDetailsComponent, UsuarioComponent ],
   imports: [
     CommonModule,
     DashboardRoutingModule,

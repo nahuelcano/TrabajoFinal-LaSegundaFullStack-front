@@ -8,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
  
-  constructor(
-    // public guard: AuthGuard
-  ) { }
+  constructor(  ) { }
 
   ngOnInit(): void {
   }
-
+  // ver como poner si no se inicio sesion que no aparezca el boton de usuario
 }

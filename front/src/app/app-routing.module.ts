@@ -9,6 +9,7 @@ import { CartaComponent } from './modules/dashboard/components/carta/carta.compo
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
 import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent } from './modules/dashboard/components';
+import { UsuarioComponent } from './modules/dashboard/components/usuario/usuario.component';
 
 
 
@@ -56,6 +57,11 @@ const routes: Routes = [
     path: 'producto-detalle',
     canLoad: [AuthGuard],
     component:ProductDetailsComponent
+  },
+  {
+    path: 'usuario',
+    canLoad: [AuthGuard],
+    component:UsuarioComponent
   },
  
   {

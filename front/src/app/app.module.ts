@@ -11,6 +11,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 // Componentes de la pagina
 import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,FooterComponent,ProductosListBoxComponent,ProductDetailsComponent } from './modules/dashboard/components';
+import { ProductoService } from './shared/services/productos.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,Cont
     AppRoutingModule,
     ReactiveFormsModule
     ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
