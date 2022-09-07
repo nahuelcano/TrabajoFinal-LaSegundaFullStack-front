@@ -27,7 +27,7 @@
 
     </mat-tab-group>
     <h3>titulo de las comidas</h3>
-    <div>A partir de aca se consumen los platos y bebidas de la base de datos</div>
+    <!-- <div>A partir de aca se consumen los platos y bebidas de la base de datos, dividir por cada tipo de comida/bebida</div> -->
     <div class="carta text-left">
         <!-- <gdp-productos-list-box></gdp-productos-list-box> -->
         <div class="list-group-item clearfix" *ngFor="let item of listaProductos">
@@ -40,9 +40,25 @@
                 <p class="list-group-item-description">${{item.precio}}</p>
             </div>
             <button mat-button [routerLink]="['/producto-detalle']"> Más detalles</button>
-            <button mat-button>
+            <button mat-button [routerLink]="['/login']">
                 <p class="comprar">Comprar</p>
             </button>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- que los admin puedan agregar/editar y eliminar comidad como tambien agregar una nueva categoria(esto se puede hacer con una tabla y listo o con las cartitas) -->

@@ -43,9 +43,9 @@ p{
 }
 
 
-
 .container px-4{
   background-color: #000 !important;
+  
 }
 
 
@@ -57,16 +57,29 @@ p{
 .text-center{
   text-align: center !important; 
 }
+.tam{
+  font-size: 6vw;
+}
+.butt{
+  width: 400px!important;
+  // min-width: 5%!important;
+}
+.tim{
+  font-size: 2vw;
+}
+.sp{
+  padding-top: 50px;
+}
 .wrapper{
-  padding-top: 100px;
+  padding-top: 300px;
   color: #d63384;
   background-image: url(../../../assets/fondoBar.jpg);
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // height: 100vh;
-  height: 60vh;
+  height: 95vh;
+  // height: 60vh;
   background-attachment: fixed;
 }
 

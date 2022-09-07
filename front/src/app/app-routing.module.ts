@@ -8,9 +8,8 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
-import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent } from './modules/dashboard/components';
+import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent } from './modules/dashboard/components';
 import { UsuarioComponent } from './modules/dashboard/components/usuario/usuario.component';
-
 
 
 const routes: Routes = [
@@ -66,6 +65,11 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     component:UsuarioComponent
   },
+  {
+    path: 'aboutus',
+    canLoad: [AuthGuard],
+    component:InfoComponent,
+  }, 
  
   {
     path: '**',

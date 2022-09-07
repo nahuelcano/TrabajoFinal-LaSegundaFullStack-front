@@ -10,13 +10,13 @@ import { AuthModule } from './modules/auth/auth.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 // Componentes de la pagina
-import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,FooterComponent,ProductosListBoxComponent,ProductDetailsComponent } from './modules/dashboard/components';
+import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,ProductosListBoxComponent,ProductDetailsComponent } from './modules/dashboard/components';
 import { ProductoService } from './shared/services/productos.service';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
-  declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, FooterComponent,ProductosListBoxComponent,ProductDetailsComponent
+  declarations: [AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, ProductosListBoxComponent,ProductDetailsComponent
   ],
   imports: [BrowserModule,
     AuthModule,
@@ -25,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     ComponentsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBtXOLNW55nnYU7jGArMYIFZSxmIhrxmKE'
+    })
     ],
   providers: [ProductoService],
   bootstrap: [AppComponent],

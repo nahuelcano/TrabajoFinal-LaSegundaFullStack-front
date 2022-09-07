@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Location } from '@angular/common';
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
