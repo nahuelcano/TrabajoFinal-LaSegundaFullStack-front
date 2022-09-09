@@ -36,6 +36,7 @@ const modules = [
 	MatSnackBarModule,
 	MatProgressSpinnerModule,
 	MatMenuModule,
+	FormsModule
 ]
 @NgModule({
 	declarations: [],

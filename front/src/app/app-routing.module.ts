@@ -8,33 +8,46 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
-import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent } from './modules/dashboard/components';
-import { UsuarioComponent } from './modules/dashboard/components/usuario/usuario.component';
-
+import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent,UsuarioComponent,AdminComponent,AdminCartaComponent,AdminUsuariosComponent } from './modules/dashboard/components';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
+   
   },
   //inicio
   {
     path: 'inicio',
     component:DashboardComponent,
   },
+  // //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
+  // {
+  //   path: 'edicion',
+  //   canLoad: [AuthGuard],
+  //   component: EdicionComponent,
+  // },
+  {
+    path: 'admin-carta',
+    canLoad: [AuthGuard],
+    component:AdminCartaComponent,
+  },
+  {
+    path: 'admin-usuario',
+    canLoad: [AuthGuard],
+    component:AdminUsuariosComponent,
+  },
  //carta
   {
     path: 'carta',
-    canLoad: [AuthGuard],
+    // canLoad: [AuthGuard],
     component:CartaComponent,
-  }, 
-  // //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
-  {
-    path: 'edicion',
-    canLoad: [AuthGuard],
-    component: EdicionComponent,
   },
+  // {
+    
+  // },
+  
   // caja/carrito
   {
     path: 'carrito',

@@ -38,10 +38,12 @@ p{
 }
 
 
-.text-primary,a {
+.text-primary,a, .logo {
   color: #d63384 !important;
 }
-
+.logo{
+  color-scheme: #d63384;
+}
 
 .container px-4{
   background-color: #000 !important;
@@ -60,12 +62,16 @@ p{
 .tam{
   font-size: 6vw;
 }
+
 .butt{
-  width: 400px!important;
+  width: 450px!important;
   // min-width: 5%!important;
+  height:max-content;
+  
 }
 .tim{
   font-size: 2vw;
+  padding-bottom: 20px;
 }
 .sp{
   padding-top: 50px;

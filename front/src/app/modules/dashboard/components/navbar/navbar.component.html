@@ -6,15 +6,26 @@
     </button>
   </a>
   <span>Bar Luna</span>
-  <!-- Agregar un panel de administrador -->
+  
+<a>
+    <button mat-button [matMenuTriggerFor]="menu" aria-label="Icon-button with user icon"><span class="material-icons">build_circle</span></button>
+      <mat-menu #menu="matMenu">
+        
+        <button mat-menu-item [routerLink]="['/admin-carta']">Carta</button>
+        <button mat-menu-item [routerLink]="['/admin-usuarios']">Usuarios</button>
+       
+      </mat-menu>
+    
+  </a>
+  
   <span class="spacer"></span>
-<a [routerLink]="['/usuario']">
-  <button mat-icon class="user-icon" aria-label="Icon-button with user icon">
-    <span class="material-icons">
-      person
-    </span>
-  </button>
-</a>
+  <a [routerLink]="['/usuario']">
+    <button mat-icon-button class="user-icon" aria-label="Icon-button with user icon">
+      <span class="material-icons">
+        person
+      </span>
+    </button>
+  </a>
   <a [routerLink]="['/carrito']">
     <button mat-icon-button class="carrito-icon" aria-label="carrito icon">
       <span class="material-icons">shopping_cart</span>
@@ -26,13 +37,13 @@
     </button>
   </a>
   <a [routerLink]="['/aboutus']">
-  <!-- poner informacion de nosotros tipo quienes somos y eso como un sobre nosotros -->
+    <!-- poner informacion de nosotros tipo quienes somos y eso como un sobre nosotros -->
     <button mat-icon-button class="contact_support" aria-label="Icon-button with info icon">
       <span class="material-icons">info</span>
     </button>
   </a>
 
-  
+
   <a [routerLink]="['/inicio']">
     <button mat-icon-button class="logout-icon" aria-label="Icon-button with LogOut icon">
       <span class="material-icons">logout</span>

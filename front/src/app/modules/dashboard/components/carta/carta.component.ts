@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Producto } from 'src/app/Producto';
-import { ProductoService } from 'src/app/shared/services/productos.service';
-import { PostsService } from 'src/app/shared/services/posts.service';
+import { ProductoService } from 'src/app/shared/services/productos/productos.service';
+import { PostsService } from 'src/app/shared/services/posts/posts.service';
 @Component({
   selector: 'gdp-carta',
   templateUrl: './carta.component.html',
@@ -9,18 +9,18 @@ import { PostsService } from 'src/app/shared/services/posts.service';
   encapsulation:ViewEncapsulation.None
 })
 export class CartaComponent implements OnInit {
-  listaProductos:Producto [] = [];
-  data: any;
-
+  listaProductos:any;
+  // data: any;
 
   constructor(private productos:ProductoService, private postData:PostsService) { }
 
 ngOnInit(): void {
-  this.listaProductos = this.productos.getProductos();  
-  console.log((this.listaProductos));
-  this.postData.getPosts().subscribe((result) => {
+  // this.listaProductos = this.productos.getProductos();  
+  // console.log((this.listaProductos));
+  this.productos.getProductos().subscribe((result) => {
     console.warn('result', result)
-    this.data = result;
+    this.listaProductos = result;
+    // console.log(result);
   })
   }
 }

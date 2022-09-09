@@ -1,3 +1,4 @@
+// import { ConnectionPositionPair } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,5 +12,16 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  postUser() {
+  //   this.userService.addUser$().subscribe({
+  //     next: (res: any) => {
+  //   console.log(res)
+  // }})
+}
+
+
+
+
 
 }
