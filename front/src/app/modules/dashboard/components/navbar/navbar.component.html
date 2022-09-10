@@ -6,18 +6,19 @@
     </button>
   </a>
   <span>Bar Luna</span>
-  
-<a>
-    <button mat-button [matMenuTriggerFor]="menu" aria-label="Icon-button with user icon"><span class="material-icons">build_circle</span></button>
-      <mat-menu #menu="matMenu">
-        
-        <button mat-menu-item [routerLink]="['/admin-carta']">Carta</button>
-        <button mat-menu-item [routerLink]="['/admin-usuarios']">Usuarios</button>
-       
-      </mat-menu>
-    
+
+  <a>
+    <button mat-button [matMenuTriggerFor]="menu" aria-label="Icon-button with user icon"><span
+        class="material-icons">build_circle</span></button>
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item [routerLink]="['/admin-carta']">Carta</button>
+      <button mat-menu-item [routerLink]="['/admin-user']">Usuarios</button>
+
+    </mat-menu>
+
   </a>
-  
+
   <span class="spacer"></span>
   <a [routerLink]="['/usuario']">
     <button mat-icon-button class="user-icon" aria-label="Icon-button with user icon">

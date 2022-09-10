@@ -17,8 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
- 
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatTable, MatTableModule } from '@angular/material/table';
+
 const modules = [
 	MatToolbarModule,
 	MatTabsModule,
@@ -36,13 +37,17 @@ const modules = [
 	MatSnackBarModule,
 	MatProgressSpinnerModule,
 	MatMenuModule,
-	FormsModule
+	FormsModule,
+	MatTableModule,
+	
+	
 ]
 @NgModule({
 	declarations: [],
 	imports: [
 		ReactiveFormsModule,
-		CommonModule, 
+		CommonModule,
+		
 		...modules
 	],
 	exports: [...modules],
