@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/services/user/user.service';
 @Component({
   selector: 'gdp-register',
   templateUrl: './register.component.html',
@@ -13,15 +14,20 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private _router: Router) {}
+  constructor(private _router: Router,private usuario:UserService) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      this._router.navigate(['/login']);
+      // aca guardaria los datos en la bd
+      // this.usuario.addUser(this.form.value).subscribe((result) => {
+      //   console.log('hola', result);
+      // });
+      // this._router.navigate(['/login']);
     } else {
+      alert('Inserte elementos validos');
     }
   }
 }

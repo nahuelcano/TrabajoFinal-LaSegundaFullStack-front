@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       console.log(this.form.value);
       // tengo el form pero deberia de guardarlo en algun lugar
       localStorage.setItem('isLogged', 'true');
+      
       // this._router.navigate(['/inicio']);
       this._location.back();
     } else {
