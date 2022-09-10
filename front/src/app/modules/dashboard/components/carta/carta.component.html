@@ -28,24 +28,33 @@
 <!-- poner aca un coso de busqueda para filtrar lo de abajo -->
     
     <h3>titulo de las comidas</h3>
+    buscador
     <!-- <div>A partir de aca se consumen los platos y bebidas de la base de datos, dividir por cada tipo de comida/bebida</div> -->
-    <div class="carta text-left">
+    <div class="grid carta text-left">
        
-        <div class="list-group-item clearfix" *ngFor="let item of listaProductos">
+        <div class="grid_item clearfix" *ngFor="let item of listaProductos">
             <div class="pull-left">
-                <h4 class="list-group-item-header"> {{item.name}}</h4>
+                <!-- <h4 class="list-group-item-header"> {{item.name}}</h4>
                 <div class="pull right">
                     <img [src]="item.imagepath" alt="item.Nombre" style="max-height: 100px">
                 </div>
                 <p class="list-group-item-description">{{item.ingredientes}}</p>
                 <p class="list-group-item-description">${{item.precio}}</p>
+                <button mat-button routerLink='/productos/{{item.id}}'>Ver detalles</button> -->
+                <gdp-card [prod]=item></gdp-card>
+                <!-- {{item.id}} -->
             </div>
-            <button mat-button [routerLink]="['/producto-detalle']"> Más detalles</button>
-            <button mat-button [routerLink]="['/login']">
-                <p class="comprar">Comprar</p>
-            </button>
+            
+            
         </div>
     </div>
+
+
+
+
+
+
+
 </div>
 
 
@@ -62,4 +71,3 @@
 
 
 
-<!-- que los admin puedan agregar/editar y eliminar comidad como tambien agregar una nueva categoria(esto se puede hacer con una tabla y listo o con las cartitas) -->

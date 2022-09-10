@@ -8,7 +8,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
-import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent,UsuarioComponent,AdminComponent,AdminCartaComponent,AdminUsuariosComponent } from './modules/dashboard/components';
+import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent,UsuarioComponent,AdminComponent,AdminCartaComponent,AdminUsuariosComponent,CardComponent } from './modules/dashboard/components';
 
 const routes: Routes = [
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
     component:AdminCartaComponent,
   },
   {
-    path: 'admin-usuario',
+    path: 'admin-user',
     canLoad: [AuthGuard],
     component:AdminUsuariosComponent,
   },
@@ -68,7 +68,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'producto-detalle',
+    path: 'productos/:id',
     canLoad: [AuthGuard],
     component:ProductDetailsComponent
   },

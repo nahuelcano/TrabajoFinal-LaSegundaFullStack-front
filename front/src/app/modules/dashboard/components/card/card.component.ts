@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { ProductoService } from 'src/app/shared/services/productos/productos.service';
 
 @Component({
   selector: 'gdp-card',
@@ -8,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
-  constructor() { }
+  @Input() prod: any;
+  
+  constructor(private producto: ProductoService) {
+    
+   }
 
   ngOnInit(): void {
+    // '{{item.id}}'
+  //   this.producto.getProducto('').subscribe((product) => {
+  //     console.warn('result', product);
+  //     this.prod = product;
+  // })
+    
   }
 
 }

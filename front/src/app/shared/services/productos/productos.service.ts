@@ -11,8 +11,11 @@ export class ProductoService implements OnInit {
   getProductos() {
     return this.http.get(this.url);
   }
-  getProducto() {
-    return this.http.get(this.url);
+  getProducto(id:string) {
+    return this.http.get(this.url+id);
+  }
+  addProduct() {
+    
   }
 
   ngOnInit(): void {

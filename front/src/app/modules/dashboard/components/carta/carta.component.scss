@@ -13,18 +13,20 @@ a:-webkit-any-link {
 .spacer {
     flex: 1 1 auto;
 }
-.hamburguesas,.pizzas,.tapeos{
-    color: black;
 
-}
 .mat-tab-label-active,.mat-tab-label-content{
     color: #d63384 !important;
 }
-// .wrapper{
-//     // padding-top: 100px;
-//     // height: 150vh;
-//     // height: 60vh;
-// }
+.wrapper{
+    
+    // background-color: #050505;
+}
 .carta{
     text-align: center;
+}
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }

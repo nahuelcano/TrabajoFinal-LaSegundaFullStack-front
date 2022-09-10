@@ -16,11 +16,10 @@ export class CartaComponent implements OnInit {
 
 ngOnInit(): void {
   // this.listaProductos = this.productos.getProductos();  
-  // console.log((this.listaProductos));
   this.productos.getProductos().subscribe((result) => {
     console.warn('result', result)
     this.listaProductos = result;
-    // console.log(result);
+    
   })
   }
 }

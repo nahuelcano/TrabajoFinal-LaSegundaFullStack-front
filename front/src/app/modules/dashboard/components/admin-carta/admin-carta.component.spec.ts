@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MaterialModule } from '@gdp/shared/modules';
 import { AdminCartaComponent } from './admin-carta.component';
 
 describe('AdminCartaComponent', () => {
