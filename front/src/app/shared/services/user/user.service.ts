@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  url = 'http://localhost:3000/find/all';
+  url = 'http://localhost:3000/auth';
   constructor(private http: HttpClient) { }
 
   getUsers() {

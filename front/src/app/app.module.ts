@@ -17,6 +17,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 import { UserService } from './shared/services/user/user.service';
+import { SearchModule } from './shared/components/search/search.module';
+
 @NgModule({
   declarations: [ AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, ProductosListBoxComponent,ProductDetailsComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent
   ],
@@ -29,6 +31,7 @@ import { UserService } from './shared/services/user/user.service';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SearchModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBtXOLNW55nnYU7jGArMYIFZSxmIhrxmKE'
     })

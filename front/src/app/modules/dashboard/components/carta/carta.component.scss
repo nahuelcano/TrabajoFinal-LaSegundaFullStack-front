@@ -2,7 +2,10 @@
 ::ng-deep .mat-tab-label-active {
     color: #be2b74 !important;
 }
-
+.titulo{
+    color: #d63384 !important;
+    font-weight: bold;
+}
 .text-primary, .comprar {
     color: #d63384 !important;
 }
@@ -20,6 +23,7 @@ a:-webkit-any-link {
 .wrapper{
     
     // background-color: #050505;
+    background-color: #121111;
 }
 .carta{
     text-align: center;
@@ -29,4 +33,7 @@ a:-webkit-any-link {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+}
+:focus{
+    outline-color: #be2b74;
 }

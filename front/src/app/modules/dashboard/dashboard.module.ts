@@ -13,6 +13,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 
+import { SearchModule } from 'src/app/shared/components/search/search.module';
+
 
 
 const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent];
@@ -27,7 +29,8 @@ const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionCom
     FlexLayoutModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    SearchModule
     
   ], 
 })
