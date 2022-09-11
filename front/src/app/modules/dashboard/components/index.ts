@@ -13,4 +13,4 @@ export * from './admin/admin.component';
 export * from './admin-carta/admin-carta.component';
 export * from './admin-usuarios/admin-usuarios.component';
 export * from './usuario/usuario.component';
-
+export * from './pipes/filtro.pipe';

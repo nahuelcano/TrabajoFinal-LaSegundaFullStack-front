@@ -1,11 +1,11 @@
 <mat-card class="card">
 
   <!-- <mat-card-header> -->
-    <div style="text-align: center;">
+  <div style="text-align: center;">
     <!-- <div mat-card-avatar class="example-header-image list-group-item-header" >{{prod.name}}</div> -->
     <mat-card-title class="titulo">{{prod.name}}</mat-card-title>
     <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-    </div>
+  </div>
   <!-- </mat-card-header> -->
 
   <!-- <img
@@ -21,9 +21,11 @@
   <mat-divider inset></mat-divider>
   <mat-card-actions>
     <button mat-button routerLink='/productos/{{prod.id}}'>Ver detalles</button>
-    <button mat-icon-button class="favorite-icon" style="color: #d63384;"><span class="material-icons">
-        favorite
-      </span></button>
+    <!-- <button mat-icon-button class="favorite-icon favorite_border" fontIcon="favorite_border" style="color: #d63384;">
+      <span class="material-icons favorite_border" onclick="selectI(icono)">
+        {{icono}}
+      </span>
+    </button> -->
     <button mat-button [routerLink]="['/login']">
       <p class="comprar">Comprar</p>
     </button>

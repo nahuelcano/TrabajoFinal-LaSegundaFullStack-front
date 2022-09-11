@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MaterialModule } from '../../modules/material/material.module';
 
 
 @NgModule({
@@ -10,7 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ],
   exports:[SearchComponent]
 })

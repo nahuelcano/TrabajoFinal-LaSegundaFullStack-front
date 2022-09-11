@@ -1,7 +1,7 @@
 export interface Producto {
-     nombre: string;
+     name: string;
      ingredientes: string;
      precio: number;
-     // imagepath: string;
+     id_categoria: string;
 
 }

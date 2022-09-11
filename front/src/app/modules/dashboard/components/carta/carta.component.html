@@ -1,14 +1,34 @@
-
-<!-- <h1 class="titulo">Carta:</h1> -->
-<!-- <h2>Recomendados</h2> -->
 <div class="wrapper">
-    
-    
+
+
     <!-- <h3>titulo de las comidas</h3> -->
-    <gdp-search></gdp-search>
+    <!-- <gdp-search></gdp-search> -->
+    <section class="search__container">
+        <div class="filtrador">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Categoria</mat-label>
+                <mat-select >
+                    <!-- [formControl]="cateControl" required (change)="onSelect($event)-->
+                    <mat-option>Todos</mat-option>
+                    <mat-option *ngFor="let cat of listaCat" #textCat (click)="select(textCat.value)" value={{cat.id}}>
+                        <!-- (selectionChange)="select($event.value)" required
+                            value=`{{cat.name}}` -->
+                        {{cat.name}}
+                    </mat-option>
+                </mat-select>
+                <!-- <mat-hint align="end">Seleccione una categoría</mat-hint> -->
+            </mat-form-field>
+        </div>
+
+        <input type="text" class="form-control search__input" #textSearch (keyup)="onSearch(textSearch.value)">
+        <!-- [formControl]="search" -->
+
+    </section>
     <div class="grid carta text-left">
-       
-        <div class="grid_item clearfix" *ngFor="let item of listaProductos">
+        <div class="grid_item clearfix" *ngFor="let item of listaProductosF"> 
+            <!-- | filtro:page:categ | filtro:page:search  "> -->
+            <!-- | filtradoC:page:search -->
             <div class="pull-left">
                 <!-- <h4 class="list-group-item-header"> {{item.name}}</h4>
                 <div class="pull right">
@@ -19,7 +39,7 @@
                 <button mat-button routerLink='/productos/{{item.id}}'>Ver detalles</button> -->
                 <gdp-card [prod]=item></gdp-card>
             </div>
-            
+
         </div>
     </div>
 
@@ -30,18 +50,3 @@
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

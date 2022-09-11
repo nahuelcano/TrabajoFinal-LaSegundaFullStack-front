@@ -1,11 +1,43 @@
 @use 'styles' as styles;
+section.search__container {
+    display: flex;
+        justify-content: space-between;
+        height: auto;
+        width: 50%;
+        margin: 1rem auto;
+        text-align: center;
+        align-content: center;
+        padding: 1rem;
+        // background-color:#050505;
+        background-color: #121111;
+        border-radius: 0.5rem;
+}
+// .filtrador{
+//     // color: #cdd4da;
+// }
+.search__input {
+    width: 42%;
+    align-content: center;
+    padding: 1rem 3.75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: white;
+    line-height: 1.5;
+    border: 2px solid #cdd4da;
+    border-radius: 1.25rem;
+    height: calc(1.25rem + 2px);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+
 ::ng-deep .mat-tab-label-active {
     color: #be2b74 !important;
 }
-.titulo{
-    color: #d63384 !important;
-    font-weight: bold;
-}
+// .titulo{
+//     color: #d63384 !important;
+//     font-weight: bold;
+// }
 .text-primary, .comprar {
     color: #d63384 !important;
 }
@@ -21,7 +53,7 @@ a:-webkit-any-link {
     color: #d63384 !important;
 }
 .wrapper{
-    
+    text-align:start;
     // background-color: #050505;
     background-color: #121111;
 }
@@ -37,3 +69,5 @@ a:-webkit-any-link {
 :focus{
     outline-color: #be2b74;
 }
+
+

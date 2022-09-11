@@ -9,7 +9,8 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-   return this.http.get(this.url);
+    const ad = '/find/all';
+   return this.http.get(this.url+ad);
   }
 // login(user: Any): Observable<any> {
 //     return this.http.post("https://reqres.in/api/login", user);

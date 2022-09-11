@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -8,9 +9,12 @@ import { FormControl } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   search = new FormControl('');
+  // @Output('search') searchEmitter = new EventEmitter<string>();
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.search.valueChanges.subscribe((value) => this.searchEmitter.emit(value))
+    
   }
-
+  
 }

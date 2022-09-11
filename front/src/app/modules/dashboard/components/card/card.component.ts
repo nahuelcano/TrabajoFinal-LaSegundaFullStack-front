@@ -10,9 +10,11 @@ import { ProductoService } from 'src/app/shared/services/productos/productos.ser
 })
 export class CardComponent implements OnInit {
   @Input() prod: any;
-  
+  public icono: string = '';
+  listaIcon: string[]=[];
   constructor(private producto: ProductoService) {
-    
+    this.icono = "favorite_border";
+    this.listaIcon = ["favorite_border","favorite"];
    }
 
   ngOnInit(): void {
@@ -23,5 +25,15 @@ export class CardComponent implements OnInit {
   // })
     
   }
-
+  select(value: string) {
+    this.icono = value;
+  }
+  selectI(icon: any) {
+    // icon.classList.toggle("favorite");
+    console.log(this.icono);
+    if (icon == "favorite_border")
+      this.icono = "favorite";
+    else
+      this.icono = "favorite_border";
+  }
 }
