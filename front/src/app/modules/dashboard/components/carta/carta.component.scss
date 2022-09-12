@@ -28,9 +28,19 @@ section.search__container {
     height: calc(1.25rem + 2px);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+.botonLimpiar{
+    padding-top: 1rem;
+    text-align: center !important ;
+    justify-content: center!important;
+}
+.limpiarVal{
+    text-align: center;
+    align-items: center;
+}
 
-
-
+.mat-primary{
+    text-align: center !important;
+}
 ::ng-deep .mat-tab-label-active {
     color: #be2b74 !important;
 }

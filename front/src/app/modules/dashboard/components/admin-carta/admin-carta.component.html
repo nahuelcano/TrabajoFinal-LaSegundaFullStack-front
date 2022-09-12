@@ -2,15 +2,15 @@
 <div class="wrapper bar">
     <div>
         <button mat-raised-button color="primary" (click)="addProduct()" class="apButton">Agregar Producto</button>
-        agregar buscador
+        
     </div>
 
     <table mat-table [dataSource]="pageSlice" class='tablaProd' style="text-align: center;">
-        <!-- ID Column
+        <!-- ID Column -->
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>No.</th>
             <td mat-cell *matCellDef="let producto">{{producto.id}}</td>
-        </ng-container> -->
+        </ng-container>
 
         <!-- Nombre Column -->
         <ng-container matColumnDef="nombre" class="mat-col" style="justify-content: center;">

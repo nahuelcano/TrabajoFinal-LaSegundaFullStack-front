@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Producto } from 'src/app/Producto';
 import { ProductoService } from 'src/app/shared/services/productos/productos.service';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
@@ -21,7 +21,7 @@ export class CartaComponent implements OnInit {
   public page: number = 0;
   public search: string = '';
   public categ: string = '';
-  
+  catego = '';
   listaCat: any;
  
   constructor(private productos:ProductoService, private categorias:CategoriasService) { }
@@ -52,7 +52,12 @@ ngOnInit(): void {
     this.listaProductosF= new FiltroPipe().transform(this.listaProductos, this.page, this.search, this.categ);
   }
  
-
+  handleClear() {
+    this.categ = '';
+    this.search = '';
+    this.listaProductosF = this.listaProductos;
+    this.catego = '';
+  }
 
 
 }

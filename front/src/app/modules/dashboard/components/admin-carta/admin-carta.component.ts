@@ -27,7 +27,7 @@ export class AdminCartaComponent implements OnInit {
   listaProductos:any;
   producto: any;
   data: any;
-  displayedColumns: string[] = ["nombre","ingredientes","precio","stock","categoria","Editar"];
+  displayedColumns: string[] = ["id","nombre","ingredientes","precio","stock","categoria","Editar"];
   pageSlice: any;
   constructor(private productos: ProductoService) { }
 
