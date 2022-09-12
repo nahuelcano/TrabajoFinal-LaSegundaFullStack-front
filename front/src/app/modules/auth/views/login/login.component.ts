@@ -13,18 +13,17 @@ import { HttpHeaders } from '@angular/common/http';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  formLogin: FormGroup; 
-  // subRe: Subscription = new Subscription;
-  
+  formLogin: FormGroup;
+
 
 
   constructor(private _router: Router, private _location: Location, formBuilder: FormBuilder,
     private usuario: UserService) {
-    this.formLogin =formBuilder.group({
+    this.formLogin = formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
-  });
-    
+    });
+
   }
 
 
@@ -32,35 +31,47 @@ export class LoginComponent implements OnInit {
     // let httpHeaders: HttpHeaders = new HttpHeaders();
     // const tok = sessionStorage.getItem('token');
   }
-  backClicked() {
+
+
+  login() {
+    if (this.formLogin.valid) {
+      // 'VER VALIDACIONES'
+      const usuarioLog: UsuarioLog = {
+        email: this.formLogin.value.email,
+        password: this.formLogin.value.password
+      }
+      this.usuario.login(usuarioLog).subscribe((u) => {
+        console.log('usuario', u);
+        this.usuario.setToken(u.token);
+        console.log(u.token);
+        sessionStorage.setItem('token', u.token);
+        localStorage.setItem('usuario', JSON.stringify(u.user));
+        console.log('id', u.user.id);
+      });
       this._location.back();
     }
-  onSubmit() {
-    
-      
-  }
-  login() {
-    const usuarioLog:UsuarioLog = {
-        email:this.formLogin.value.email,
-        password:this.formLogin.value.password
+    else {
+      alert('El mail o la contraseña insertados son invalidos')
     }
-    this.usuario.login(usuarioLog).subscribe((u) => {
-      console.log('usuario', u);
-      this.usuario.setToken(u.token);
-      
-    })
+  }
+  // this.usuario.login(usuarioLog).subscribe((u) => {
+  //     console.log('usuario', u);
+  //     this.usuario.setToken(u.token);
+  //     console.log(u.token);
+  //     sessionStorage.setItem('token', u.token);
+  //     localStorage.setItem('usuario', JSON.stringify(u.user));
+  //     console.log('id', u.user.id);
+  //   },
+
+  backClicked() {
     this._location.back();
   }
 
 
-
-
-  }
+}
 //  ngOnDestroy(): void {
 //   //Called once, before the instance is destroyed.
-//   //Add 'implements OnDestroy' to the class.
-//    if (this.subRe) {
-//      this.subRe.unsubscribe();
-//   }
- 
+//   /Add 'implements OnDestroy' to the class.
+//    
+
 

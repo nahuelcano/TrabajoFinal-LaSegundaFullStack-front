@@ -7,10 +7,10 @@
   </a>
   <span>Bar Luna</span>
 
-  <a>
-    <button mat-button [matMenuTriggerFor]="menu" aria-label="Icon-button with user icon"><span
-        class="material-icons">build_circle</span></button>
-    <mat-menu #menu="matMenu">
+  <a id="boton-admin" hidden>
+    <button mat-button [matMenuTriggerFor]="menu" aria-label="Icon-button with user icon" >
+      <span class="material-icons">build_circle</span></button>
+    <mat-menu #menu="matMenu" class="menuAD"   >
 
       <button mat-menu-item [routerLink]="['/admin-carta']">Carta</button>
       <button mat-menu-item [routerLink]="['/admin-user']">Usuarios</button>
@@ -47,7 +47,7 @@
 
   <a [routerLink]="['/inicio']">
     <button mat-icon-button class="logout-icon" aria-label="Icon-button with LogOut icon">
-      <span class="material-icons">logout</span>
+      <span class="material-icons" (click)="logout()">logout</span>
       <!-- falta poner que se salga la sesion iniciada (con un servicio) -->
     </button>
   </a>

@@ -19,7 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ProductoComponent } from './components/producto/producto.component';
 
 
-const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent];
+const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent,UsuarioComponent];
 
 @NgModule({
   declarations: [DashboardComponent, ...components, ProductDetailsComponent, UsuarioComponent, CardComponent, ProductoComponent],

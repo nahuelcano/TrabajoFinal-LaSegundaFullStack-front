@@ -1,9 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 // import { HttpClientModule } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { Producto } from 'src/app/modelos/Producto';
+import { Observable } from 'rxjs';
+import { Response } from 'src/app/modelos/Response';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +20,7 @@ export class ProductoService implements OnInit {
     stock: new FormControl(''),
     id_categoria: new FormControl(''),
   });
-
+  
   constructor(private http: HttpClient) { }
    
 
@@ -29,7 +32,7 @@ export class ProductoService implements OnInit {
   getProducto(id:string) {
     return this.http.get(this.url+id);
   }
-  addProduct(prod:Producto) {
+  addProduct(prod:Producto, header:Headers) {
     // return this.http.post(this.url);
     return this.http.post(this.url, prod);
     

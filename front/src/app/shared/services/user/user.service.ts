@@ -11,6 +11,7 @@ import { UsuarioLog, UsuarioReg } from 'src/app/modelos/Usuario';
 })
 export class UserService {
   url = 'http://localhost:3000/auth';
+  datoUsuario:any;
   constructor(private http: HttpClient, private cookies:CookieService) { }
 
   getUsers() {
@@ -40,12 +41,13 @@ export class UserService {
     this.cookies.set("token", token);
   }
 
-  getUserLogged() {
-    const token = this.getToken();
-    const ad = '/find/1';
-    // + `${{id }}`
-    return this.http.get(this.url + ad);
-
+  getUserNLogged() {
+    // const token = this.getToken();
+    // const ad = '/find/1';
+    // // + `${{id }}`
+    // return this.http.get(this.url + ad);
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+    return this.datoUsuario.name;
 
   }
   

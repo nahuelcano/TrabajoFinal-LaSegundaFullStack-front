@@ -61,17 +61,21 @@ export class RegisterComponent implements OnInit {
 
 
   register() {
-    const usuarioReg: UsuarioReg = {
-      name: this.formReg.value.name,
-      email:this.formReg.value.email,
-      password: this.formReg.value.password,
-      role:1
+    if (this.formReg.valid) {
+      const usuarioReg: UsuarioReg = {
+        name: this.formReg.value.name,
+        email: this.formReg.value.email,
+        password: this.formReg.value.password,
+        role: 1
     }
-    this.usuario.register(usuarioReg).subscribe((u) => {
-      console.log('usuario', u);
-      this.usuario.setToken(u.token);
-    })
-    this._location.back();
-
+      this.usuario.register(usuarioReg).subscribe((u) => {
+        console.log('usuario', u);
+        this.usuario.setToken(u.token);
+      })
+      this._location.back();
+    }
+    else {
+      alert('uno o mas campos son incorrectos');
+    }
   }
 }

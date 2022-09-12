@@ -1,5 +1,5 @@
 <article class="login">
-  <form [formGroup]="formLogin" class="login__content" (submit)="onSubmit()">
+  <form [formGroup]="formLogin" class="login__content" (submit)="login()">
     <mat-form-field appearance="outline" class="login__input">
       <mat-label>Mail</mat-label>
       <input matInput formControlName="email" type="email" formControlName="email"  />

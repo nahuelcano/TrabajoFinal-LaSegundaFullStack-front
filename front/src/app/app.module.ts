@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
 // Componentes de la pagina
-import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,ProductosListBoxComponent,ProductDetailsComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent, FiltroPipe } from './modules/dashboard/components';
+import { NavbarComponent, EdicionComponent, CartaComponent,CarritoComponent,ContactoComponent,ProductosListBoxComponent,ProductDetailsComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent, FiltroPipe, UsuarioComponent } from './modules/dashboard/components';
 import { ProductoService } from './shared/services/productos/productos.service';
 import { UserService } from './shared/services/user/user.service';
 import { SearchModule } from './shared/components/search/search.module';
@@ -28,7 +28,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [ AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, ProductosListBoxComponent,ProductDetailsComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent, FiltroPipe
+  declarations: [ AppComponent,DashboardComponent, NavbarComponent, EdicionComponent,CartaComponent,CarritoComponent,ContactoComponent, ProductosListBoxComponent,ProductDetailsComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent, FiltroPipe, UsuarioComponent
   ],
   imports: [BrowserModule,
     AuthModule,
