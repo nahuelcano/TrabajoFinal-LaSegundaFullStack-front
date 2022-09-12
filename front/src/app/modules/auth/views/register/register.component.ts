@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsuarioLog, UsuarioReg } from 'src/app/modelos/Usuario';
 import { UserService } from 'src/app/shared/services/user/user.service';
 @Component({
   selector: 'gdp-register',
@@ -8,19 +9,41 @@ import { UserService } from 'src/app/shared/services/user/user.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  form = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-  });
+  formReg: FormGroup; 
+  // form = new FormGroup({
+  //   name: new FormControl(''),
+  //   email: new FormControl(''),
+  //   password: new FormControl(''),
+  // });
 
-  constructor(private _router: Router,private usuario:UserService) {}
+  constructor(private _router: Router, private usuario: UserService, formBuilder: FormBuilder) {
+    this.formReg = formBuilder.group({
+      name:[''],
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+      
+  });
+  }
 
   ngOnInit(): void {}
 
   onSubmit() {
-    if (this.form.valid) {
-      console.log(this.form.value);
+      if (this.formReg.valid) {
+      console.log('formReg',this.formReg.value);
+      //   const usuarioLog: Usuario = {
+      //   name:this.formReg.value.name,
+      //   email:this.formReg.value.email,
+      //   password: this.formReg.value.password,
+      //   role: this.formReg.value.role
+      // } 
+      // this.subRe =
+        // this.usuario.addUser(usuarioLog).subscribe((u) => {
+        // const token = u.body!.response;
+        // console.log('token', token);
+        // sessionStorage.setItem('token', token);
+        // // this._location.back();
+    // }
+    //   , err => { console.log('Error en el login'); })
       // aca guardaria los datos en la bd
       // this.usuario.addUser(this.form.value).subscribe((result) => {
       //   console.log('hola', result);
@@ -29,5 +52,20 @@ export class RegisterComponent implements OnInit {
     } else {
       alert('Inserte elementos validos');
     }
+  }
+
+
+
+
+
+  register() {
+    const usuarioReg: UsuarioReg = {
+      name: this.formReg.value.name,
+      email:this.formReg.value.email,
+      password: this.formReg.value.password,
+    }
+    this.usuario.register(usuarioReg).subscribe((u) => {
+      console.log('usuario',u);
+    })
   }
 }

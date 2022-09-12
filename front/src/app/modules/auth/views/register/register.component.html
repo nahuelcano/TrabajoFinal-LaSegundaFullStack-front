@@ -1,5 +1,5 @@
 <article class="register">
-  <form [formGroup]="form" class="register__content" (submit)="onSubmit()">
+  <form [formGroup]="formReg" class="register__content" (submit)="onSubmit()">
     <mat-form-field appearance="outline" class="register__input">
       <mat-label>Nombre de usuario</mat-label>
       <input matInput formControlName="name" placeholder="Placeholder" />
@@ -15,7 +15,7 @@
       <input matInput formControlName="password" type="password" placeholder="Placeholder" />
     </mat-form-field>
 
-    <button mat-flat-button color="primary" class="register__submit">
+    <button mat-flat-button color="primary" class="register__submit"type="submit" (click)="register()">
       Registrarse
     </button>
 
