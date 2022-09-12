@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
       if (this.formReg.valid) {
-      console.log('formReg',this.formReg.value);
+      // console.log('formReg',this.formReg.value);
       //   const usuarioLog: Usuario = {
       //   name:this.formReg.value.name,
       //   email:this.formReg.value.email,
@@ -69,7 +69,7 @@ export class RegisterComponent implements OnInit {
         role: 1
     }
       this.usuario.register(usuarioReg).subscribe((u) => {
-        console.log('usuario', u);
+        // console.log('usuario', u);
         this.usuario.setToken(u.token);
       })
       this._location.back();

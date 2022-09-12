@@ -27,9 +27,9 @@ export class AdminUsuariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.usuarios.getUsers().subscribe((result) => {
-      console.log('res', result);
+      // console.log('res', result);
       this.listaUsuarios = result;
-      console.log('lista', this.listaUsuarios);
+      // console.log('lista', this.listaUsuarios);
       
     })
 

@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { ComponentsModule, MaterialModule } from '@gdp/shared/modules';
 import { MatTabsModule } from '@angular/material/tabs';
-import { CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent,ProductosListBoxComponent, InfoComponent,AdminCartaComponent,AdminComponent,AdminUsuariosComponent,CardComponent } from '@gdp/dashboard/components';
+import { CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent,ProductosListBoxComponent, InfoComponent,AdminCartaComponent,AdminUsuariosComponent,CardComponent } from '@gdp/dashboard/components';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -19,7 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ProductoComponent } from './components/producto/producto.component';
 
 
-const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent,UsuarioComponent];
+const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent,UsuarioComponent];
 
 @NgModule({
   declarations: [DashboardComponent, ...components, ProductDetailsComponent, UsuarioComponent, CardComponent, ProductoComponent],

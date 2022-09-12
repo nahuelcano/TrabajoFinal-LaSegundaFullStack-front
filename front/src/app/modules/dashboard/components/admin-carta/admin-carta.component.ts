@@ -38,9 +38,9 @@ export class AdminCartaComponent implements OnInit {
   ngOnInit(): void {
 
     this.productos.getProductos().subscribe((result) => {
-      console.warn('result', result);
+      // console.warn('result', result);
       this.listaProductos = result;
-      console.log('lista', this.listaProductos);
+      // console.log('lista', this.listaProductos);
       this.pageSlice = this.listaProductos.slice(0, 15);
       // this.table.renderRows();
     });
@@ -54,14 +54,14 @@ export class AdminCartaComponent implements OnInit {
   }
 
   OnPageChange(event: PageEvent) {
-    console.log(event);
+    // console.log(event);
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = event.pageSize + startIndex;
     if (endIndex > this.listaProductos.length) {
       endIndex = this.listaProductos.length;
     }
     this.pageSlice = this.listaProductos.slice(startIndex, endIndex);
-    console.log(this.pageSlice);
+    // console.log(this.pageSlice);
   }
   editarProducto(pro: Producto) {
 
@@ -72,7 +72,7 @@ export class AdminCartaComponent implements OnInit {
   borrarProd(prod: Producto) {
 
     this.productos.eliminar(prod.id).subscribe((borrado) => {
-      console.log(borrado);
+      // console.log(borrado);
     });
     // this.table.renderRows();
 

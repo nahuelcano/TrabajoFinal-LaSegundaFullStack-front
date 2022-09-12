@@ -8,7 +8,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { CartaComponent } from './modules/dashboard/components/carta/carta.component';
 import { CarritoComponent } from './modules/dashboard/components/carrito/carrito.component';
 import { ContactoComponent } from './modules/dashboard/components/contacto/contacto.component';
-import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent,UsuarioComponent,AdminComponent,AdminCartaComponent,AdminUsuariosComponent,CardComponent } from './modules/dashboard/components';
+import { EdicionComponent, ProductDetailsComponent, ProductosListBoxComponent, InfoComponent,UsuarioComponent,AdminCartaComponent,AdminUsuariosComponent,CardComponent } from './modules/dashboard/components';
 
 const routes: Routes = [
   {
@@ -22,12 +22,7 @@ const routes: Routes = [
     path: 'inicio',
     component:DashboardComponent,
   },
-  // //aca seria la parte de la amb, que muestre las comidas/bebidas para editar o borrar
-  // {
-  //   path: 'edicion',
-  //   canLoad: [AuthGuard],
-  //   component: EdicionComponent,
-  // },
+  
   {
     path: 'admin-carta',
     canLoad: [AuthGuard],
@@ -54,11 +49,11 @@ const routes: Routes = [
   // },
   
   // caja/carrito
-  {
-    path: 'carrito',
-    canLoad: [AuthGuard],
-    component:CarritoComponent,
-  }, 
+  // {
+  //   path: 'carrito',
+  //   canLoad: [AuthGuard],
+  //   component:CarritoComponent,
+  // }, 
   //contacto
   {
     path: 'contacto',
