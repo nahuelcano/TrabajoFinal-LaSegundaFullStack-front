@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   
 
 
-  constructor(private _router: Router, private _location: Location, formBuilder:FormBuilder, private usuario:UserService) {
+  constructor(private _router: Router, private _location: Location, formBuilder: FormBuilder,
+    private usuario: UserService) {
     this.formLogin =formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -35,27 +36,7 @@ export class LoginComponent implements OnInit {
       this._location.back();
     }
   onSubmit() {
-    // if (this.formLogin.valid) {
-    //   console.log(this.formLogin.value);
-    //   const usuarioLog: Usuario = {
-    //     email:this.formLogin.value.email,
-    //     password:this.formLogin.value.password
-    //   } 
-    //   // this.subRe =
-    //     this.usuario.addUser(usuarioLog).subscribe((u) => {
-    //     const token = u.body!.response;
-    //     console.log('token', token);
-    //     sessionStorage.setItem('token', token);
-    //     // this._location.back();
-    //   }, err => { console.log('Error en el login'); })
-      
-    //   localStorage.setItem('isLogged', 'true');
-      
-    //   // this._router.navigate(['/inicio']);
-    //   // this._location.back();
-    // } else {
-    //   alert('El email o la contraseña son incorrectos.');
-    //   this.formLogin.markAllAsTouched();
+    
       
   }
   login() {
@@ -64,8 +45,11 @@ export class LoginComponent implements OnInit {
         password:this.formLogin.value.password
     }
     this.usuario.login(usuarioLog).subscribe((u) => {
-      console.log('usuario',u);
+      console.log('usuario', u);
+      this.usuario.setToken(u.token);
+      
     })
+    this._location.back();
   }
 
 

@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { UsuarioLog, UsuarioReg } from 'src/app/modelos/Usuario';
 import { UserService } from 'src/app/shared/services/user/user.service';
+import { Location } from '@angular/common';
 @Component({
   selector: 'gdp-register',
   templateUrl: './register.component.html',
@@ -16,7 +17,7 @@ export class RegisterComponent implements OnInit {
   //   password: new FormControl(''),
   // });
 
-  constructor(private _router: Router, private usuario: UserService, formBuilder: FormBuilder) {
+  constructor(private _location: Location,private _router: Router, private usuario: UserService, formBuilder: FormBuilder) {
     this.formReg = formBuilder.group({
       name:[''],
       email: ['', Validators.required],
@@ -41,7 +42,6 @@ export class RegisterComponent implements OnInit {
         // const token = u.body!.response;
         // console.log('token', token);
         // sessionStorage.setItem('token', token);
-        // // this._location.back();
     // }
     //   , err => { console.log('Error en el login'); })
       // aca guardaria los datos en la bd
@@ -53,7 +53,9 @@ export class RegisterComponent implements OnInit {
       alert('Inserte elementos validos');
     }
   }
-
+  backClicked() {
+      this._location.back();
+    }
 
 
 
@@ -63,9 +65,13 @@ export class RegisterComponent implements OnInit {
       name: this.formReg.value.name,
       email:this.formReg.value.email,
       password: this.formReg.value.password,
+      role:1
     }
     this.usuario.register(usuarioReg).subscribe((u) => {
-      console.log('usuario',u);
+      console.log('usuario', u);
+      this.usuario.setToken(u.token);
     })
+    this._location.back();
+
   }
 }

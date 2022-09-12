@@ -2,17 +2,17 @@
   <form [formGroup]="formReg" class="register__content" (submit)="onSubmit()">
     <mat-form-field appearance="outline" class="register__input">
       <mat-label>Nombre de usuario</mat-label>
-      <input matInput formControlName="name" placeholder="Placeholder" />
+      <input matInput formControlName="name"  />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="register__input">
       <mat-label>Mail</mat-label>
-      <input matInput formControlName="email" type="email" placeholder="Placeholder" />
+      <input matInput formControlName="email" type="email"  />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="register__input">
       <mat-label>Contraseña</mat-label>
-      <input matInput formControlName="password" type="password" placeholder="Placeholder" />
+      <input matInput formControlName="password" type="password" />
     </mat-form-field>
 
     <button mat-flat-button color="primary" class="register__submit"type="submit" (click)="register()">
