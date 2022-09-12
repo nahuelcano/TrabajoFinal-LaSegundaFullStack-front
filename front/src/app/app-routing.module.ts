@@ -45,7 +45,7 @@ const routes: Routes = [
     component:CartaComponent,
   },
   {
-    path: 'edicion',
+    path: 'nuevo-producto',
     canLoad: [AuthGuard],
     component:EdicionComponent,
   },

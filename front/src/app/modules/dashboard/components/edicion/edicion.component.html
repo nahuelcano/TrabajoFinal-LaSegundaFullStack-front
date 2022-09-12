@@ -1,4 +1,4 @@
-<!-- <h1 mat-dialog-title>Hi</h1> -->
+<!-- <h1 mat-dialog-title class="titulo">Nuevo Producto</h1> -->
 <div class="wrapper">
     <div class="cuerpito">
         <div mat-dialog-content class="formulario">
@@ -35,13 +35,12 @@
                     <mat-hint align="end">Seleccione una categoría</mat-hint>
                     <!-- <input matInput type="text" name="pCategoria"> -->
                 </mat-form-field>
+                <p></p>
                 <!-- <input type="submit" value="Add Producto"> -->
-                <button mat-button type="submit" value="Add Producto" style="color: greenyellow;">Guardar</button>
+                <button mat-button type="submit" value="Add Producto" style="color: #d63384; justify-content: center;" (click)="backClicked()" >Guardar</button>
             </form>
         </div>
         <div mat-dialog-actions>
-            <button mat-button type="submit" value="Add Producto" style="color: blue;">Guardar</button>
-            <button mat-button style="color: red;">Cancelar</button>
 
         </div>
     </div>

@@ -4,7 +4,7 @@ import { CategoriasService } from 'src/app/shared/services/categorias/categorias
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ProductoService } from 'src/app/shared/services/productos/productos.service';
 import { HttpHeaders } from '@angular/common/http';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'gdp-edicion',
   templateUrl: './edicion.component.html',
@@ -22,7 +22,7 @@ export class EdicionComponent implements OnInit {
   // form: ngForm;
   toke: any;
   
-  constructor(private categorias: CategoriasService, private productos: ProductoService) {
+  constructor(private categorias: CategoriasService, private productos: ProductoService, private _location: Location) {
     // this.producto = new Producto();
    }
 
@@ -33,9 +33,9 @@ export class EdicionComponent implements OnInit {
     })
     // this.toke = JSON.parse(localStorage.getItem('token') || '{}');
   }
-  select(value:string) {
+  select(categoria:string) {
     // console.log(value);
-    this.categ = value;
+    this.categ = categoria;
   }
   onProductsCreate(prod: Producto) {
     console.log('aver',localStorage.getItem("token"));
@@ -49,5 +49,8 @@ export class EdicionComponent implements OnInit {
     console.log('producto nuevo', this.producto);
 
     
+  }
+  backClicked() {
+    this._location.back();
   }
 }
