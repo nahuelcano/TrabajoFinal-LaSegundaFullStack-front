@@ -6,6 +6,8 @@
 
 .bgcolor {
   background-color: styles.colors(warnDark);
+  // min-width:fit-content !important;
+  min-width:max-content !important;
   
 }
 

@@ -3,5 +3,6 @@ export interface Producto {
      ingredientes: string;
      precio: number;
      id_categoria: string;
+     stock: number;
 
 }

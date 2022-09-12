@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Producto } from 'src/app/Producto';
+import { Producto } from 'src/app/modelos/Producto';
 import { ProductoService } from 'src/app/shared/services/productos/productos.service';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
 import { SearchModule } from 'src/app/shared/components/search/search.module';

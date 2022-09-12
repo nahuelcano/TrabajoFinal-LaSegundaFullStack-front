@@ -10,18 +10,19 @@ import { CarritoComponent, CartaComponent, ContactoComponent, EdicionComponent,P
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { FiltroPipe } from '@gdp/dashboard/components';
 import { SearchModule } from 'src/app/shared/components/search/search.module';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { ProductoComponent } from './components/producto/producto.component';
 
 
 const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionComponent,ProductosListBoxComponent, InfoComponent, AdminComponent, AdminCartaComponent, AdminUsuariosComponent, CardComponent];
 
 @NgModule({
-  declarations: [DashboardComponent, ...components, ProductDetailsComponent, UsuarioComponent, CardComponent],
+  declarations: [DashboardComponent, ...components, ProductDetailsComponent, UsuarioComponent, CardComponent, ProductoComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -33,7 +34,8 @@ const components = [CarritoComponent,CartaComponent,ContactoComponent,EdicionCom
     MatSelectModule,
     MatPaginatorModule,
     SearchModule,
-    MatOptionModule
+    MatOptionModule,
+    FormsModule
     
   ], 
 })

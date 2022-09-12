@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from 'src/app/Producto';
+import { Producto } from 'src/app/modelos/Producto';
 @Component({
   selector: 'gdp-components',
   template: ``,

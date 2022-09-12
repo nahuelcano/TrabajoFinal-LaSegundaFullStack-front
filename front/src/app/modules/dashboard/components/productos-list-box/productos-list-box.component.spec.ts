@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductosListBoxComponent } from './productos-list-box.component';
-import { Producto } from '../../../../Producto';
+import { Producto } from '../../../../modelos/Producto';
 
 describe('ProductosListBoxComponent', () => {
   let component: ProductosListBoxComponent;

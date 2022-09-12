@@ -19,7 +19,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatTable, MatTableModule } from '@angular/material/table';
-
+import {MatDialogModule} from '@angular/material/dialog';
 const modules = [
 	MatToolbarModule,
 	MatTabsModule,
@@ -39,6 +39,7 @@ const modules = [
 	MatMenuModule,
 	FormsModule,
 	MatTableModule,
+	MatDialogModule,
 	
 	
 ]

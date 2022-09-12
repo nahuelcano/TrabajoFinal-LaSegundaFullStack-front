@@ -5,7 +5,8 @@ import { MaterialModule } from '@gdp/shared/modules';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import {MatTable, MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog'; 
+import { ProductoComponent } from '../producto/producto.component';
 @Component({
   selector: 'gdp-admin-carta',
   templateUrl: './admin-carta.component.html',
@@ -29,7 +30,7 @@ export class AdminCartaComponent implements OnInit {
   data: any;
   displayedColumns: string[] = ["id","nombre","ingredientes","precio","stock","categoria","Editar"];
   pageSlice: any;
-  constructor(private productos: ProductoService) { }
+  constructor(private productos: ProductoService, private dialog:MatDialog) { }
 
   
 ngOnInit(): void {
@@ -52,7 +53,10 @@ ngOnInit(): void {
   addProduct() {
     // agregar los datos del producto
     // tipo el nombre, ingredientes, precio,stock, tipo de categoria (con un extendible).
-  
+    this.dialog.open(ProductoComponent);
+
+
+
   }
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -64,5 +68,6 @@ ngOnInit(): void {
     this.pageSlice = this.listaProductos.slice(startIndex, endIndex);
     console.log(this.pageSlice);
   }
+  
 }
 

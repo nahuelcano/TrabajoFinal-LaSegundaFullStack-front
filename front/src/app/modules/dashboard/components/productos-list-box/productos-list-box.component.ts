@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from '../../../../Producto';
+import { Producto } from '../../../../modelos/Producto';
 @Component({
   selector: 'gdp-productos-list-box',
   templateUrl: './productos-list-box.component.html',
