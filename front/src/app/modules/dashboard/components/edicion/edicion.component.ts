@@ -22,31 +22,31 @@ export class EdicionComponent implements OnInit {
   // form: ngForm;
   toke: any;
   
-  constructor(private categorias:CategoriasService, private productos:ProductoService) { }
+  constructor(private categorias: CategoriasService, private productos: ProductoService) {
+    // this.producto = new Producto();
+   }
 
   ngOnInit(): void {
     this.categorias.getCategorias().subscribe((cate) => {
     console.log('categoria', cate)
     this.listaCat = cate;
     })
-    this.toke = JSON.parse(sessionStorage.getItem('token') || '{}');
+    // this.toke = JSON.parse(localStorage.getItem('token') || '{}');
   }
   select(value:string) {
     // console.log(value);
     this.categ = value;
-    
   }
   onProductsCreate(prod: Producto) {
-    let head = new Headers({
-      Autorization: `Bearer ${this.toke}`,
-    });
-
-    this.productos.addProduct(prod,head).subscribe((p) => {
+    console.log('aver',localStorage.getItem("token"));
+    const tokn = localStorage.getItem("token") || '{}';
+    console.log(tokn);
+    this.productos.addProduct(prod,tokn).subscribe((nuevoProd) => {
       console.log('prodd', prod);
-      this.producto = p;
+      console.log('nuevoProd', nuevoProd);
+      this.producto = nuevoProd;
     });
-    
-    console.log('proddu', this.producto);
+    console.log('producto nuevo', this.producto);
 
     
   }

@@ -1,4 +1,5 @@
 export interface Producto {
+     id: number;
      name: string;
      ingredientes: string;
      precio: number;

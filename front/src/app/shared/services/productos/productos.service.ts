@@ -20,7 +20,12 @@ export class ProductoService implements OnInit {
     stock: new FormControl(''),
     id_categoria: new FormControl(''),
   });
-  
+  tokk = localStorage.getItem("token") || '{}';
+  httpOption = {
+    headers: new HttpHeaders({
+      "Authorization": "Token " + this.tokk
+    })
+  };
   constructor(private http: HttpClient) { }
    
 
@@ -32,9 +37,12 @@ export class ProductoService implements OnInit {
   getProducto(id:string) {
     return this.http.get(this.url+id);
   }
-  addProduct(prod:Producto, header:Headers) {
+  addProduct(prod:Producto, token:string) {
     // return this.http.post(this.url);
-    return this.http.post(this.url, prod);
+    
+    // const tokn = JSON.parse(sessionStorage.getItem('token') || '{}');
+    // console.log('entras',tokn);
+    return this.http.post(this.url, prod,this.httpOption);
     
   }
   initializeFormGroup() {
@@ -48,13 +56,16 @@ export class ProductoService implements OnInit {
     });
   }
 
-  // private 
-  // filterData(valueToSearch: string): void{
-    // const query = {};
-    // this.
+  updateProd(prod: Producto) {
     
-  // }
+    
+  }
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+  }
+  eliminar(id: number) {
+    //confirm de borrar
+    return this.http.delete(this.url + id, this.httpOption);
   }
 }

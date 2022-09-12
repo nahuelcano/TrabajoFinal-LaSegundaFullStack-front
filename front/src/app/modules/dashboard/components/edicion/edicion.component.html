@@ -26,7 +26,7 @@
                 <p>Categoria</p>
                 <mat-form-field appearance="fill">
                     <mat-label>Categoria</mat-label>
-                    <mat-select [(ngModel)]="catego" name="categoria">
+                    <mat-select [(ngModel)]="catego" name="id_categoria">
                         <mat-option *ngFor="let cat of listaCat" #textCat (click)="select(textCat.value)"
                             value={{cat.id}}>
                             {{cat.name}}

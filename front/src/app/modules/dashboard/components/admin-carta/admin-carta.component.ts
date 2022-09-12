@@ -7,6 +7,7 @@ import {MatTable, MatTableDataSource, MatTableModule} from '@angular/material/ta
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog'; 
 import { ProductoComponent } from '../producto/producto.component';
+import { Producto } from 'src/app/modelos/Producto';
 @Component({
   selector: 'gdp-admin-carta',
   templateUrl: './admin-carta.component.html',
@@ -25,7 +26,7 @@ import { ProductoComponent } from '../producto/producto.component';
  
 export class AdminCartaComponent implements OnInit {
   #title = 'Lista de productos';
-  listaProductos:any;
+  listaProductos:any=[];
   producto: any;
   data: any;
   displayedColumns: string[] = ["id","nombre","ingredientes","precio","stock","categoria","Editar"];
@@ -55,8 +56,6 @@ ngOnInit(): void {
     // tipo el nombre, ingredientes, precio,stock, tipo de categoria (con un extendible).
     this.dialog.open(ProductoComponent);
 
-
-
   }
   OnPageChange(event: PageEvent) {
     console.log(event);
@@ -69,5 +68,12 @@ ngOnInit(): void {
     console.log(this.pageSlice);
   }
   
+  borrarProd(prod: Producto) {
+    
+    this.productos.eliminar(prod.id).subscribe((borrado) => {
+      console.log(borrado);
+    });
+    
+  }
 }
 
