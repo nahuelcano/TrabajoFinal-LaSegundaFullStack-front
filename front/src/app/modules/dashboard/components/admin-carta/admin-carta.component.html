@@ -18,11 +18,7 @@
             <td mat-cell *matCellDef="let item">{{item.name}}</td>
         </ng-container>
 
-        <!-- Categoria Column -->
-        <ng-container matColumnDef="categoria" class="mat-col" style="justify-content: center;">
-            <th mat-header-cell *matHeaderCellDef> Categoria</th>
-            <td mat-cell *matCellDef="let item">{{item.id_categoria}}</td>
-        </ng-container>
+       
 
         <!-- Ingredientes Column -->
         <ng-container matColumnDef="ingredientes" class="mat-col" style="justify-content: center;">
@@ -40,6 +36,11 @@
         <ng-container matColumnDef="stock" class="mat-col" style="text-align: center;">
             <th mat-header-cell *matHeaderCellDef> Stock</th>
             <td mat-cell *matCellDef="let item">{{item.stock}}</td>
+        </ng-container>
+        <!-- Categoria Column -->
+        <ng-container matColumnDef="categoria" class="mat-col" style="justify-content: center;">
+            <th mat-header-cell *matHeaderCellDef> Categoria</th>
+            <td mat-cell *matCellDef="let item">{{item.id_categoria}}</td>
         </ng-container>
 
         <ng-container matColumnDef="Editar" class="mat-col" style="text-align: center;">

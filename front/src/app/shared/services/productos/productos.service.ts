@@ -56,10 +56,10 @@ export class ProductoService implements OnInit {
     });
   }
 
-  updateProd(prod: Producto) {
+  // updateProd(prod: Producto) {
     
     
-  }
+  // }
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');

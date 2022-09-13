@@ -20,7 +20,9 @@ export class CategoriasService implements OnInit {
   // getCategoriasFiltro(filtro: string) {
   //   this.
   // }
-
+  // getNCategoria(id:string) {
+  //   return this.http.get(this.url + id);
+  // }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }

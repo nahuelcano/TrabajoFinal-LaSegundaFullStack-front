@@ -8,6 +8,7 @@ import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { Producto } from 'src/app/modelos/Producto';
+import { CategoriasService } from 'src/app/shared/services/categorias/categorias.service';
 @Component({
   selector: 'gdp-admin-carta',
   templateUrl: './admin-carta.component.html',
@@ -31,8 +32,9 @@ export class AdminCartaComponent implements OnInit {
   data: any;
   displayedColumns: string[] = ["id", "nombre", "ingredientes", "precio", "stock", "categoria", "Editar"];
   pageSlice: any;
+  nCate: any =[];
   // @ViewChild('table') table!: MatTable<Element>;
-  constructor(private productos: ProductoService, private dialog: MatDialog) { }
+  constructor(private productos: ProductoService, private dialog: MatDialog, private categoria:CategoriasService) { }
 
 
   ngOnInit(): void {
@@ -45,6 +47,7 @@ export class AdminCartaComponent implements OnInit {
       // this.table.renderRows();
     });
     // this.pageSlice = this.listaProductos.slice(0, 5);
+    
   }
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
@@ -63,10 +66,18 @@ export class AdminCartaComponent implements OnInit {
     this.pageSlice = this.listaProductos.slice(startIndex, endIndex);
     // console.log(this.pageSlice);
   }
-  editarProducto(pro: Producto) {
+  // editarProducto(pro: Producto) {
 
-  }
-
+  // no entiendo porque este getCategoria no trae lo que tiene que traer
+  // getCategoriaI(id: string) {
+  //   console.log(id);
+  //   this.categoria.getCategoria(id).subscribe((c) => {
+  //     this.nCate = c;
+  //     console.log(c);
+  //   });
+  //   console.log(this.nCate);
+  //   return this.nCate.name;
+  // }
 
 
   borrarProd(prod: Producto) {
