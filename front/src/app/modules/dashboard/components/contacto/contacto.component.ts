@@ -7,7 +7,7 @@ import { FormControl, Validators,ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./contacto.component.scss']
 })
 export class ContactoComponent {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  email = new FormControl('', [Validators.email]);
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
