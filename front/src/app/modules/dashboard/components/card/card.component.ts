@@ -28,12 +28,13 @@ export class CardComponent implements OnInit {
   select(value: string) {
     this.icono = value;
   }
-  selectI(icon: any) {
-    // icon.classList.toggle("favorite");
-    console.log(this.icono);
-    if (icon == "favorite_border")
-      this.icono = "favorite";
-    else
-      this.icono = "favorite_border";
-  }
+  //ojala esto hubiera andado pero no
+  // selectI(icon: any) {
+  //   // icon.classList.toggle("favorite");
+  //   console.log(this.icono);
+  //   if (icon == "favorite_border")
+  //     this.icono = "favorite";
+  //   else
+  //     this.icono = "favorite_border";
+  // }
 }

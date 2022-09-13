@@ -11,12 +11,14 @@ import { UserService } from 'src/app/shared/services/user/user.service';
 })
 export class UsuarioComponent implements OnInit {
   Nombre: string = '';
-  
+  mail: string = '';
   constructor(private us:UserService, private ruta:Router) { }
 
   ngOnInit(): void {
-    if (localStorage.getItem('token') != null)
+    if (localStorage.getItem('token') != null) {
       this.Nombre = this.us.getUserNLogged();
+      this.mail = this.us.getUserMail();
+    }
     else
       this.ruta.navigate(['/login']);
   }
@@ -24,12 +26,10 @@ export class UsuarioComponent implements OnInit {
     // this.user.find()
     return this.Nombre;
   }
-  postUser() {
-  //   this.userService.addUser$().subscribe({
-  //     next: (res: any) => {
-  //   console.log(res)
-  // }})
-}
+  getUserMail() {
+    return this.mail;
+  }
+ 
 
 
 

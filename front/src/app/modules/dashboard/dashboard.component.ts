@@ -12,8 +12,8 @@ datoUsuario:any;
   ngOnInit(): void {
     
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario')||'{}');
-    console.log('este es el usuario', this.datoUsuario);
-    console.log(this.datoUsuario.id)
+    // console.log('este es el usuario', this.datoUsuario);
+    // console.log(this.datoUsuario.role)
   }
 
 }

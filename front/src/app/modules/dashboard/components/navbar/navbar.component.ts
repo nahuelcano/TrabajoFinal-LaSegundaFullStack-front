@@ -17,9 +17,9 @@ export class NavbarComponent implements OnInit {
    
     let element = document.getElementById("boton-admin");
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario')||'{}');
-    console.log(this.datoUsuario);
+    // console.log(this.datoUsuario);
     this.rol = this.datoUsuario.role;
-    console.log('rol:', this.rol);
+    // console.log('rol:', this.rol);
     if (this.rol === 3)
       element?.removeAttribute("hidden");
     else

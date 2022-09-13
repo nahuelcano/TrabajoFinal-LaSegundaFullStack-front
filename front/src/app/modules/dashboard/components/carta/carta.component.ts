@@ -28,12 +28,12 @@ export class CartaComponent implements OnInit {
 
 ngOnInit(): void { 
   this.productos.getProductos().subscribe((result) => {
-    console.log('result', result)
+    // console.log('result', result);
     this.listaProductos = result;
     this.listaProductosF = this.listaProductos;
   })
   this.categorias.getCategorias().subscribe((cate) => {
-    console.log('categoria', cate)
+    // console.log('categoria', cate);
     this.listaCat = cate;
   })
 }
@@ -48,7 +48,7 @@ ngOnInit(): void {
     // console.log(value);
     this.page = 0;
     this.categ = value;
-    console.log('dale', this.categ);
+    // console.log('dale', this.categ);
     this.listaProductosF= new FiltroPipe().transform(this.listaProductos, this.page, this.search, this.categ);
   }
  

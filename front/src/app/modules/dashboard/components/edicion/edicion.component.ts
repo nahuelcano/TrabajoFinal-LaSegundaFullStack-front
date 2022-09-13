@@ -22,13 +22,11 @@ export class EdicionComponent implements OnInit {
   // form: ngForm;
   toke: any;
   
-  constructor(private categorias: CategoriasService, private productos: ProductoService, private _location: Location) {
-    // this.producto = new Producto();
-   }
+  constructor(private categorias: CategoriasService, private productos: ProductoService, private _location: Location) {  }
 
   ngOnInit(): void {
     this.categorias.getCategorias().subscribe((cate) => {
-    console.log('categoria', cate)
+    // console.log('categoria', cate);
     this.listaCat = cate;
     })
     // this.toke = JSON.parse(localStorage.getItem('token') || '{}');
@@ -38,15 +36,15 @@ export class EdicionComponent implements OnInit {
     this.categ = categoria;
   }
   onProductsCreate(prod: Producto) {
-    console.log('aver',localStorage.getItem("token"));
+    // console.log('aver',localStorage.getItem("token"));
     const tokn = localStorage.getItem("token") || '{}';
     console.log(tokn);
     this.productos.addProduct(prod,tokn).subscribe((nuevoProd) => {
-      console.log('prodd', prod);
-      console.log('nuevoProd', nuevoProd);
+      // console.log('prodd', prod);
+      // console.log('nuevoProd', nuevoProd);
       this.producto = nuevoProd;
     });
-    console.log('producto nuevo', this.producto);
+    // console.log('producto nuevo', this.producto);
 
     
   }

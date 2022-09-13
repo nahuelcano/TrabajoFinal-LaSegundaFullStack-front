@@ -33,7 +33,7 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     component:AdminUsuariosComponent,
   },
- //carta
+  //carta
   {
     path: 'carta',
     // canLoad: [AuthGuard],
@@ -44,11 +44,7 @@ const routes: Routes = [
     canLoad: [AuthGuard],
     component:EdicionComponent,
   },
-  // {
-    
-  // },
-  
-  // caja/carrito
+   // caja/carrito
   // {
   //   path: 'carrito',
   //   canLoad: [AuthGuard],

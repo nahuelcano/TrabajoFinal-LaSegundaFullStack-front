@@ -14,7 +14,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productos: ProductoService, private activatedRoute: ActivatedRoute) { 
     this.activatedRoute.params.subscribe(result => {
       this.id = result['id'];
-      console.log('id:',result);
+      // console.log('id:',result);
       
     });
   }
@@ -22,7 +22,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.productos.getProducto(this.id).subscribe((producto) => {
-      console.warn('result', producto);
+      // console.warn('result', producto);
       this.prod = producto;
       
       

@@ -48,7 +48,10 @@ export class UserService {
     // return this.http.get(this.url + ad);
     this.datoUsuario = JSON.parse(localStorage.getItem('usuario') || '{}');
     return this.datoUsuario.name;
-
+  }
+  getUserMail() {
+    this.datoUsuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+    return this.datoUsuario.email;
   }
   
   //   addUser(user:UsuarioLog) {

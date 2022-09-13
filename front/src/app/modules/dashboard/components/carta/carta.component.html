@@ -1,25 +1,17 @@
 <div class="wrapper">
-
-
     <!-- <h3>titulo de las comidas</h3> -->
-    <!-- <gdp-search></gdp-search> -->
     <section class="search__container">
         <div class="filtrador">
-
             <mat-form-field appearance="fill">
                 <mat-label>Categoria</mat-label>
                 <mat-select [(ngModel)]="catego">
-                    <!-- <mat-option>Todos</mat-option> -->
                     <mat-option *ngFor="let cat of listaCat" #textCat (click)="select(textCat.value)" value={{cat.id}}>
-                        <!-- (selectionChange)="select($event.value)" required
-                            value=`{{cat.name}}` -->
                         {{cat.name}}
                     </mat-option>
                 </mat-select>
                 <mat-hint align="end">Seleccione una categoría</mat-hint>
             </mat-form-field>
         </div>
-
         <input type="text" class="form-control search__input" #textSearch (keyup)="onSearch(textSearch.value)">
         <!-- [formControl]="search" -->
         <div class="boton-limpiar-filtrado text-primary">
@@ -29,31 +21,16 @@
                     (click)="textSearch.value=''">
                     <span class="limpiarVal">Limpiar</span></button>
             </div>
-
         </div>
     </section>
     <div class="grid carta text-left">
         <div class="grid_item clearfix" *ngFor="let item of listaProductosF">
-            <!-- | filtro:page:categ | filtro:page:search  "> -->
-            <!-- | filtradoC:page:search -->
-            <div class="pull-left">
-                <!-- <h4 class="list-group-item-header"> {{item.name}}</h4>
-                <div class="pull right">
-                    <img [src]="item.imagepath" alt="item.Nombre" style="max-height: 100px">
-                </div>
-                <p class="list-group-item-description">{{item.ingredientes}}</p>
-                <p class="list-group-item-description">${{item.precio}}</p>
-                <button mat-button routerLink='/productos/{{item.id}}'>Ver detalles</button> -->
+            <div class="pull-left"> 
                 <gdp-card [prod]=item></gdp-card>
             </div>
 
         </div>
     </div>
-
-
-
-
-
 
 
 </div>
